@@ -3,11 +3,11 @@ package edu.psu.abington.ist.ist242;
 import java.util.Scanner;
 
 public class User {
-    private int userID = 1;
-    private String userName;
-    private String Address;
-    private String eMail;
-    private String passWord;
+    public int userID = 1;
+    public String userName;
+    public String Address;
+    public String eMail;
+    public String passWord;
     Boolean isSalesman;
     int creditScore;
 

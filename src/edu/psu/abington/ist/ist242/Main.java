@@ -10,7 +10,6 @@ public class Main {
 
         customer.userName = "wxp13";
         customer.passWord = "ist242";
-        customer.
 
 
     }
