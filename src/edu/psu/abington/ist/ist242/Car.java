@@ -4,7 +4,7 @@ public class Car {
     int carID, sellingPrice;
     boolean isNew;
     String make, year, model, color;
-
+//hello
     public void setCarDetails (int carID, boolean isNew, int sellingPrice, String make, String year, String model, String color)
     {
         this.carID = carID;
