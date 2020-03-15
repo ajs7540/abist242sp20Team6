@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3b59c139-b626-4b44-a772-bc4b9664f770" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,14 +98,29 @@
       <option name="project" value="LOCAL" />
       <updated>1584313205939</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added User class">
+      <created>1584314304725</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584314304725</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added bank class">
+      <created>1584314337504</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1584314337504</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Checking in william" />
     <MESSAGE value="Removed Hello" />
     <MESSAGE value="added User class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added User class" />
+    <MESSAGE value="added bank class" />
+    <option name="LAST_COMMIT_MESSAGE" value="added bank class" />
   </component>
   <component name="WindowStateProjectService">
     <state x="738" y="103" key="#Main" timestamp="1584303728860">
@@ -121,10 +135,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1584210273338" />
-    <state x="546" y="55" key="CommitChangelistDialog2" timestamp="1584314320434">
+    <state x="546" y="55" key="CommitChangelistDialog2" timestamp="1584314335016">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="546" y="55" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1584314320434" />
+    <state x="546" y="55" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1584314335016" />
     <state x="910" y="295" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584138123879" />
     <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1584210234608">
       <screen x="0" y="0" width="1536" height="824" />
@@ -146,10 +160,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="723" height="223" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1584305863002" />
-    <state x="523" y="260" key="Vcs.Push.Dialog.v2" timestamp="1584314306359">
+    <state x="523" y="260" key="Vcs.Push.Dialog.v2" timestamp="1584314339638">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="523" y="260" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1584314306359" />
+    <state x="523" y="260" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1584314339638" />
     <state x="872" y="422" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584138141726" />
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1584210206946">
       <screen x="0" y="0" width="1536" height="824" />
