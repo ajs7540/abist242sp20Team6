@@ -2,7 +2,6 @@ public class SalesPerson {
 
     int salesID;
     String firstName, lastName, salesPassword;
-    boolean salesFinalize;
 
     public void setSalesPerson(String fname, String lname, int salesID , String sPass)
 
