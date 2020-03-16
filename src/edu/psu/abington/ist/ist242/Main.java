@@ -24,7 +24,7 @@ public class Main {
                 String customerUserName = sc.next();
                 System.out.println("Enter password:");
                 String customerPassword = sc.next();
-                if (customerUserName == customer.checkUserNames()) {
+                if (customer.checkUserNames(customerUserName )) {
                 }
                 else if (operation.equals("2")) {
                     if (customerPassword == customer.checkUserPassword()) {
