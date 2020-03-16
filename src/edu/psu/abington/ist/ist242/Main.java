@@ -24,10 +24,10 @@ public class Main {
                 String customerUserName = sc.next();
                 System.out.println("Enter password:");
                 String customerPassword = sc.next();
-                if (customer.checkUserNames(customerUserName )) {
+                if (Customer.checkUserNames(customerUserName )) {
                 }
                 else if (operation.equals("2")) {
-                    if (customerPassword == customer.checkUserPassword()) {
+                    if (customerPassword == Customer.checkUserPassword()) {
 
                     }
 

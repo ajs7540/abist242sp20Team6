@@ -2,7 +2,7 @@ package edu.psu.abington.ist.ist242;
 
 import java.util.Scanner;
 
-public class User {
+public class Customer {
     public int userID = 1;
     public String userName;
     public String Address;
