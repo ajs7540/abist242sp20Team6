@@ -11,7 +11,7 @@ public class Customer {
     Boolean isSalesman;
     int creditScore;
 
-    public User(int userID, String userName, String passWord,
+    public Customer(int userID, String userName, String passWord,
                 String eMail, String Address, int creditScore,
                 boolean isSalesman)
     {
