@@ -29,6 +29,29 @@ public class Main {
                 if (login.checkPassword()) {
                     System.out.println("You are logged in!");
                     i = 3;
+                    System.out.println("Enter 1 to view current cars in car inventory");
+                    System.out.println("Enter 2 to do option 2");
+                    System.out.println("Enter 3 to do option 3");
+                    System.out.println("Enter 4 to do option 4");
+                    System.out.println("Enter q to Quit");
+                    int b = Menu.callmenu(4);
+                    if(b == 1){
+                        //This is option 1
+                        System.out.print("Option: " + b);
+                    }
+                    else if(b == 2){
+                        //This is option 1
+                        System.out.print("Option: " + b);
+                    }
+                    else if(b == 3){
+                        //This is option 1
+                        System.out.print("Option: " + b);
+                    }
+                    else if(b == 4){
+                        //This is option 1
+                        System.out.print("Option: " + b);
+                    }
+
                 } else {
                     System.out.println("The username and password you entered are incorrect.\nYou have " + (2 - i) + " more attempts until program quits.");
                 }
