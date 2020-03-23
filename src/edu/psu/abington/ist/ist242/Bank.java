@@ -1,7 +1,6 @@
 package edu.psu.abington.ist.ist242;
 
 public class Bank {
-    int i;
     int bankID = 123456789;
 
 
