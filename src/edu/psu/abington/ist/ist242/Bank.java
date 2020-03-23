@@ -1,5 +1,22 @@
 package edu.psu.abington.ist.ist242;
 
 public class Bank {
-    //bank setters and getters
+    int i;
+    int bankID;
+
+    public void getCustomerCreditScore() {
+
+    }
+
+    public void checkCustomerCreditScore() {
+
+    }
+
+    public void addPayment() {
+
+    }
+
+    public void searchPayment() {
+
+    }
 }
