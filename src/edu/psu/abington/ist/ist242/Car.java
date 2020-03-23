@@ -1,9 +1,13 @@
 package edu.psu.abington.ist.ist242;
 
+import java.util.ArrayList;
+
 public class Car {
     int carID, sellingPrice;
     boolean isNew;
     String make, year, model, color;
+    private ArrayList <Car>newCars;
+    private ArrayList <Car>oldCars;
 
     public void setCarDetails (int carID, boolean isNew, int sellingPrice, String make, String year, String model, String color)
     {
@@ -28,4 +32,29 @@ public class Car {
         System.out.println("Year: "+ year);
 
     }
-}
+
+    public void oldCarsInventory(){
+        oldCars = new ArrayList<>();
+    }
+
+    public void newCarsInventory(){
+        newCars = new ArrayList<>();
+    }
+
+    public void addCar(Car car1) {
+        if (isNew) {
+            newCars.add(car1);
+        } else {
+            oldCars.add(car1);
+        }
+    }
+    public void removeCar(Car car1){
+            if (isNew) {
+                newCars.remove(car1);
+            }
+            else{
+                oldCars.remove(car1);
+            }
+        }
+    }
+
