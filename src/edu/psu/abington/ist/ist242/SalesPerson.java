@@ -6,8 +6,8 @@ public class SalesPerson extends User {
     String firstName, lastName, salesPassword;
     private ArrayList<SalesPerson>salesTeam;
 
-    public SalesPerson(int userID, String userName, String passWord, String eMail, String Address, String username, String password) {
-        super(userID, userName, passWord, eMail, Address, username, password);
+    public SalesPerson(int userID, String userName, String passWord, String eMail, String Address) {
+        super(userID, userName, passWord, eMail, Address);
     }
 
     public void setSalesPerson(String fname, String lname, int salesID , String sPass)
