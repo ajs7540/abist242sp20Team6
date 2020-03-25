@@ -1,6 +1,6 @@
-//Joe
+//Liliya
 package edu.psu.abington.ist.ist242;
-// Liliya
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
