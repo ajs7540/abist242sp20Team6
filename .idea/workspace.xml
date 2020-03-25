@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b59c139-b626-4b44-a772-bc4b9664f770" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/Order.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/Customer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585173513515</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="updated user / sales person/ customer">
+      <created>1585173590205</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1585173590205</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -238,14 +244,18 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="498" y="196" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1536.824@0.0.1536.824" timestamp="1584210273338" />
+    <state x="2731" y="412" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1585174649179">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2731" y="412" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1585174649179" />
     <state x="1076" y="586" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1584551426085">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1076" y="586" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584551426085" />
-    <state x="546" y="0" key="CommitChangelistDialog2" timestamp="1585173513059">
+    <state x="546" y="0" key="CommitChangelistDialog2" timestamp="1585173589734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="546" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585173513059" />
+    <state x="546" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585173589734" />
     <state x="546" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1584993724894" />
     <state x="910" y="295" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584573149124" />
     <state x="512" y="49" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1584981808914" />
@@ -294,10 +304,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="525" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1584318318618" />
-    <state x="523" y="248" key="Vcs.Push.Dialog.v2" timestamp="1585171465770">
+    <state x="523" y="248" key="Vcs.Push.Dialog.v2" timestamp="1585173592964">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="523" y="248" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585171465770" />
+    <state x="523" y="248" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585173592964" />
     <state x="523" y="260" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1584993730234" />
     <state x="872" y="422" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584573150967" />
     <state x="491" y="271" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1584985595966" />
@@ -307,12 +317,11 @@
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584548285878" />
     <state x="775" y="401" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584643008002" />
     <state x="436" y="258" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1584981903698" />
-    <state x="1385" y="568" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585174376315">
-      <screen x="0" y="0" width="2560" height="1400" />
+    <state x="779" y="357" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585010129724">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
     <state x="831" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1584548291803" />
     <state x="831" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1584990709723" />
-    <state x="1385" y="568" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1585174376315" />
     <state x="779" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.821@0.23.1440.821" timestamp="1584981911236" />
     <state x="779" y="357" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1585007360380" />
     <state x="779" y="357" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.823@0.23.1440.823" timestamp="1585010129724" />
