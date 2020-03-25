@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b59c139-b626-4b44-a772-bc4b9664f770" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/Customer.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,21 +211,7 @@
       <option name="project" value="LOCAL" />
       <updated>1585173590205</updated>
     </task>
-    <task id="LOCAL-00021" summary="added a comment">
-      <created>1585174741125</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1585174741125</updated>
-    </task>
-    <task id="LOCAL-00022" summary="added a comment">
-      <created>1585174881792</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1585174881792</updated>
-    </task>
-    <option name="localTasksCounter" value="23" />
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -239,8 +225,7 @@
     <MESSAGE value="updated bank class&#10;added methods" />
     <MESSAGE value="updated bank class&#10;added code to methods" />
     <MESSAGE value="updated user / sales person/ customer" />
-    <MESSAGE value="added a comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated user / sales person/ customer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="738" y="103" key="#Main" timestamp="1584303728860">
@@ -267,10 +252,10 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="1076" y="586" width="408" height="237" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584551426085" />
-    <state x="546" y="0" key="CommitChangelistDialog2" timestamp="1585174881295">
+    <state x="546" y="0" key="CommitChangelistDialog2" timestamp="1585173589734">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="546" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585174881295" />
+    <state x="546" y="0" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1585173589734" />
     <state x="546" y="0" key="CommitChangelistDialog2/0.0.1536.864@0.0.1536.864" timestamp="1584993724894" />
     <state x="910" y="295" key="CommitChangelistDialog2/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584573149124" />
     <state x="512" y="49" key="CommitChangelistDialog2/0.23.1440.821@0.23.1440.821" timestamp="1584981808914" />
@@ -319,10 +304,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="525" y="128" key="VCS.ChangeListViewerDialog/0.0.1536.824@0.0.1536.824" timestamp="1584318318618" />
-    <state x="523" y="248" key="Vcs.Push.Dialog.v2" timestamp="1585174742977">
+    <state x="523" y="248" key="Vcs.Push.Dialog.v2" timestamp="1585173592964">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="523" y="248" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585174742977" />
+    <state x="523" y="248" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1585173592964" />
     <state x="523" y="260" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1584993730234" />
     <state x="872" y="422" key="Vcs.Push.Dialog.v2/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584573150967" />
     <state x="491" y="271" key="Vcs.Push.Dialog.v2/0.23.1440.823@0.23.1440.823" timestamp="1584985595966" />
@@ -332,10 +317,10 @@
     <state x="465" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1584548285878" />
     <state x="775" y="401" key="com.intellij.ide.util.TipDialog/0.0.2560.1400/2560.0.2560.1400/-2560.0.2560.1400@0.0.2560.1400" timestamp="1584643008002" />
     <state x="436" y="258" key="com.intellij.ide.util.TipDialog/0.23.1440.821@0.23.1440.821" timestamp="1584981903698" />
-    <state x="831" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585174858184">
-      <screen x="0" y="0" width="1536" height="824" />
+    <state x="779" y="357" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1585010129724">
+      <screen x="0" y="23" width="1440" height="823" />
     </state>
-    <state x="831" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1585174858184" />
+    <state x="831" y="334" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1584548291803" />
     <state x="831" y="350" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.864@0.0.1536.864" timestamp="1584990709723" />
     <state x="779" y="356" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.821@0.23.1440.821" timestamp="1584981911236" />
     <state x="779" y="357" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1440.822@0.23.1440.822" timestamp="1585007360380" />
