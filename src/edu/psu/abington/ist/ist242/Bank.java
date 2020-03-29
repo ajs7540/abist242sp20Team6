@@ -11,6 +11,7 @@ package edu.psu.abington.ist.ist242;
 
 public class Bank {
     int bankID = 123456789;
+    int cScore;
 
 
     public void getCustomerCreditScore() {
@@ -19,18 +20,10 @@ public class Bank {
 
     public void checkCustomerCreditScore() {
         if (cScore >= 650) && (cScore <= 850) {
-            //credit approved
+            //Customer approved
         }
         else if (cScore < 650) {
-            //credit denied
+            //Customer denied
         }
-    }
-
-    public void addPayment() {
-
-    }
-
-    public void searchPayment() {
-
     }
 }
