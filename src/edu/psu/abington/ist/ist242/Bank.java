@@ -8,9 +8,10 @@ Last Date Changed:
 Revision: 0
 */
 package edu.psu.abington.ist.ist242;
+import java.util.Scanner;
 
 public class Bank {
-    int bankID = 123456789;
+    int bankID;
     int cScore;
 
     public Bank(int bankID, int cScore) {
@@ -23,7 +24,7 @@ public class Bank {
     }
 
     public void checkCustomerCreditScore() {
-        if (cScore >= 650) && (cScore <= 850) {
+        if (cScore >= 650 && cScore <= 850) {
             //Customer approved
         }
         else if (cScore < 650) {
