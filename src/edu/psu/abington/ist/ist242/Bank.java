@@ -13,9 +13,13 @@ public class Bank {
     int bankID = 123456789;
     int cScore;
 
+    public Bank(int bankID, int cScore) {
+        this.bankID = bankID;
+        this.cScore = cScore;
+    }
 
-    public void getCustomerCreditScore() {
-        Customer.creditScore = cScore;
+    public int getCustomerCreditScore() {
+        return cScore;
     }
 
     public void checkCustomerCreditScore() {
