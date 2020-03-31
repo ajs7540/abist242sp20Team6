@@ -34,9 +34,9 @@ public class Main {
                 System.out.println("Password: ");
                 password = sc.nextLine();
 
-                User login = new User(username, password);
+                User login = new User (username, password);
 
-                if (login.checkPassword()) {
+                if (login.checkPassword(username, password)) {
                     System.out.println("You are logged in!");
                     i = 3;
                     System.out.println("Enter 1 to view current cars in car inventory");

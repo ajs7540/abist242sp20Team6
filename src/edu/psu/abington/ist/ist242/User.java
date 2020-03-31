@@ -30,6 +30,7 @@ public class User {
 
     }
 
+
     public boolean checkPassword(String username, String password)
     {
         if((username.equals(accounts[0][0])) && (password.equals(accounts[0][1])) || (username.equals(accounts[1][0])) && (password.equals(accounts[1][1])))
