@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3b59c139-b626-4b44-a772-bc4b9664f770" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/Bank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/Bank.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/PaymentInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/psu/abington/ist/ist242/PaymentInformation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +20,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="MERGE" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/joeoakes/abist242sp20Team6.git" />
+      </set>
+    </option>
   </component>
   <component name="ProjectId" id="1Z5nwzN5RQuuE0EUDBf6ajPFYkJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
