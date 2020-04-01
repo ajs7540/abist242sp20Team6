@@ -9,6 +9,8 @@ Revision: 0
 */
 package edu.psu.abington.ist.ist242;
 
+import java.util.ArrayList;
+
 public class User {
 
     public int userID = 1;
@@ -31,11 +33,29 @@ public class User {
     }
 
 
-    public boolean checkPassword(String username, String password)
+    public static boolean checkPassword(String username, String password, ArrayList<Customer> customerList, ArrayList<SalesPerson> salesTeam )
     {
-        if((username.equals(accounts[0][0])) && (password.equals(accounts[0][1])) || (username.equals(accounts[1][0])) && (password.equals(accounts[1][1])))
-            return true;
-        else
-            return false;
+        boolean found = false;
+        for (Customer cust: customerList)
+        {
+            if (cust.userName.equals(username)&&cust.passWord.equals(password))
+            {
+                found = true;
+                break;
+            }
+        }
+        if (!found)
+        {
+            for (SalesPerson sp: salesTeam)
+            {
+                if (sp.userName.equals(username)&&sp.passWord.equals(password))
+                {
+                    found = true;
+                    break;
+                }
+            }
+        }
+
+        return found;
     }
 }

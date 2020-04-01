@@ -15,27 +15,23 @@ import java.util.Scanner;
 public class Customer extends User {
     int creditScore;
 
-    private ArrayList <Customer> customerList = new ArrayList<>();
-
-
     public Customer(int userID, String userName, String passWord, String eMail, String Address, int creditScore) {
         super(userID, userName, passWord, eMail, Address);
         this.creditScore = creditScore;
     }
 
-    public void addCustomer(Customer customer)
+    public void addCustomer(Customer customer, ArrayList<Customer> customerList)
     {
         customerList.add(customer);
     }
 
-    public void deleteCustomer(Customer customer)
+    public void deleteCustomer(Customer customer, ArrayList<Customer> customerList)
     {
         customerList.remove(customer);
     }
 
-    public void editCustomer(Customer customer)
+    public int getCreditScore()
     {
-
-
+        return creditScore;
     }
 }

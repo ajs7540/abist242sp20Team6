@@ -13,14 +13,13 @@ public class SalesPerson extends User {
 
     int salesID;
     String firstName, lastName, salesPassword;
-    private ArrayList<SalesPerson>salesTeam;
+
 
     public SalesPerson(int userID, String userName, String passWord, String eMail, String Address) {
         super(userID, userName, passWord, eMail, Address);
     }
 
     public void setSalesPerson(String fname, String lname, int salesID , String sPass)
-
         {
             this.firstName = fname;
             this.lastName = lname;
@@ -28,30 +27,30 @@ public class SalesPerson extends User {
             this.salesPassword = sPass;
         }
 
-        public String getSalesPassword() {
-
+        public String getSalesPassword()
+        {
             return salesPassword;
         }
 
-        public String getFirstName() {
-
+        public String getFirstName()
+        {
             return firstName;
 
         }
 
-        public String getLastName() {
-
+        public String getLastName()
+        {
             return lastName;
         }
 
-        public void addSalesPerson(SalesPerson salesMan){
-
+        public void addSalesPerson(SalesPerson salesMan, ArrayList<SalesPerson> salesTeam)
+        {
             salesTeam.add(salesMan);
 
         }
 
-        public void removeSalesPerson(SalesPerson salesMan){
-
+        public void removeSalesPerson(SalesPerson salesMan, ArrayList<SalesPerson> salesTeam)
+        {
             salesTeam.remove(salesMan);
 
         }

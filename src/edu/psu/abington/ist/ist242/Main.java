@@ -9,11 +9,15 @@ Revision: 0
 */
 
 package edu.psu.abington.ist.ist242;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
+        ArrayList<Customer> customerList = new ArrayList<>();
+        ArrayList<SalesPerson> salesTeam = new ArrayList<>();
+
         System.out.println("Welcome to Car Dealership Program!");
         System.out.println("Please select from the following options");
 
@@ -34,9 +38,7 @@ public class Main {
                 System.out.println("Password: ");
                 password = sc.nextLine();
 
-                User login = new User (username, password);
-
-                if (login.checkPassword(username, password)) {
+                if ( User.checkPassword(username,password, customerList, salesTeam)) {
                     System.out.println("You are logged in!");
                     i = 3;
                     System.out.println("Enter 1 to view current cars in car inventory");
@@ -50,15 +52,15 @@ public class Main {
                         System.out.print("Option: " + b);
                     }
                     else if(b == 2){
-                        //This is option 1
+                        //This is option 2
                         System.out.print("Option: " + b);
                     }
                     else if(b == 3){
-                        //This is option 1
+                        //This is option 3
                         System.out.print("Option: " + b);
                     }
                     else if(b == 4){
-                        //This is option 1
+                        //This is option 4
                         System.out.print("Option: " + b);
                     }
 
