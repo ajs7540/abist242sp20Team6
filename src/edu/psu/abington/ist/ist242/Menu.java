@@ -31,13 +31,26 @@ public class Menu {
         return null;
     }
 
-    public static void salesPersonMenu()
+    public static void salesPersonMenu(ArrayList<Car> cars)
     {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory");
+        switch (c)
+        {
+            case 'v':
+                Car.printInventory(cars);
+                break;
+        }
+
     }
 
-    public static void customerMenu()
+    public static void customerMenu(ArrayList<Car> cars)
     {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info");
+        switch (c)
+        {
+            case 'v':
+                Car.printInventory(cars);
+                break;
+        }
     }
 }

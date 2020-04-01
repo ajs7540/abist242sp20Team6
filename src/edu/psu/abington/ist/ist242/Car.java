@@ -12,13 +12,19 @@ package edu.psu.abington.ist.ist242;
 import java.util.ArrayList;
 
 public class Car {
-    int carID, sellingPrice;
+    int carID, sellingPrice, year;
     boolean isNew;
-    String make, year, model, color;
+    String make, model;
     private ArrayList <Car>newCars;
     private ArrayList <Car>oldCars;
+    Color color;
 
-    public Car (int carID, boolean isNew, int sellingPrice, String make, String year, String model, String color)
+    enum Color
+    {
+        RED, GREEN, BLUE, BLACK, WHITE;
+    }
+
+    public Car (int carID, boolean isNew, int sellingPrice, String make, int year, String model, Color color)
     {
         this.carID = carID;
         this.isNew = isNew;
@@ -29,16 +35,16 @@ public class Car {
         this.color = color;
     }
 
-    public void getCarDetails ()
+    public static void getCarDetails (Car car)
     {
-        System.out.println("Car ID: "+ carID);
+        System.out.println("Car ID: "+ car.carID);
         System.out.print("it is ");
-        if (isNew) System.out.println("New");
+        if (car.isNew) System.out.println("New");
         else System.out.println("Used");
-        System.out.println("Selling Price: "+ sellingPrice);
-        System.out.println("Make: "+ make);
-        System.out.println("Model: "+ model);
-        System.out.println("Year: "+ year);
+        System.out.println("Selling Price: "+ car.sellingPrice);
+        System.out.println("Make: "+ car.make);
+        System.out.println("Model: "+ car.model);
+        System.out.println("Year: "+ car.year);
 
     }
 
@@ -50,12 +56,9 @@ public class Car {
         newCars = new ArrayList<>();
     }
 
-    public void addCar(Car car1) {
-        if (isNew) {
-            newCars.add(car1);
-        } else {
-            oldCars.add(car1);
-        }
+    public void addCar(ArrayList <Car> cars)
+    {
+        cars.add(this);
     }
     public void removeCar(Car car1){
             if (isNew) {
@@ -63,6 +66,13 @@ public class Car {
             }
             else{
                 oldCars.remove(car1);
+            }
+        }
+
+        public static void printInventory (ArrayList <Car> cars)
+        {
+            for (Car car: cars){
+                Car.getCarDetails(car);
             }
         }
     }

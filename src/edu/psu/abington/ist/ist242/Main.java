@@ -17,6 +17,9 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Customer> customerList = new ArrayList<>();
         ArrayList<SalesPerson> salesTeam = new ArrayList<>();
+        ArrayList <Car> cars = new ArrayList<>();
+        Car car1 = new Car(1, true, 7000, "Toyota", 2017, "Camry", Car.Color.BLUE);
+        car1.addCar(cars);
 
         Customer cust1 = new Customer(1, "john", "john1", "john@email.com", "1 some street, PA", 700);
         Customer cust2 = new Customer(2, "anna", "anna1", "anna@email.com", "2 some street, PA", 701);
@@ -47,19 +50,19 @@ public class Main {
         System.out.println("Please select from the following options:");
 
 
-        char c = getAction("Enter L to Login \nEnter q to Quit");
+        char c = getAction("Enter L to Login or enter 'q' to Quit:");
       //  int a = Menu.callmenu(1);
         if (c == 'l') {
             int i = login (customerList, salesTeam);
             if (i ==1)
             {
                 System.out.println("Customer menu:");
-                Menu.customerMenu();
+                Menu.customerMenu(cars);
             }
             else if (i == 2)
             {
                 System.out.println("Sales person menu:");
-                Menu.salesPersonMenu();
+                Menu.salesPersonMenu(cars);
             }
             else
                 {
