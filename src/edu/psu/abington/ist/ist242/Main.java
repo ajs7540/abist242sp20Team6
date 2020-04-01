@@ -17,6 +17,7 @@ public class Main {
     public static void main(String[] args) {
         ArrayList<Customer> customerList = new ArrayList<>();
         ArrayList<SalesPerson> salesTeam = new ArrayList<>();
+        ArrayList<Order> orders = new ArrayList<>();
 
         Customer cust1 = new Customer(1, "john", "john1", "john@email.com", "1 some street, PA", 700);
         Customer cust2 = new Customer(2, "anna", "anna1", "anna@email.com", "2 some street, PA", 701);
