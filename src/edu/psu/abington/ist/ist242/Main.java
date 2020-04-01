@@ -95,4 +95,12 @@ public class Main {
             }
         }
     }
+    public static char getAction(String prompt) {
+        Scanner scnr = new Scanner(System.in);
+        String answer = "";
+        System.out.println(prompt);
+        answer = scnr.nextLine().toLowerCase() + " ";
+        char firstChar = answer.charAt(0);
+        return firstChar;
+    }
 }

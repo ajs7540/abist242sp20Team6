@@ -34,4 +34,13 @@ public class Customer extends User {
     {
         return creditScore;
     }
+
+    public static void printCustomers(ArrayList<Customer> cList){
+        for (Customer cust: cList){
+            System.out.println("Customer Id:" + cust.getID());
+            System.out.println("Customer Name:" + cust.getName());
+            System.out.println("Customer Email:" + cust.geteMail());
+            System.out.println("Customer Address:" + cust.getAddress());
+        }
+    }
 }

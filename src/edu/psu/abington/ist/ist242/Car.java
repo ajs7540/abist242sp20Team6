@@ -18,7 +18,7 @@ public class Car {
     private ArrayList <Car>newCars;
     private ArrayList <Car>oldCars;
 
-    public void setCarDetails (int carID, boolean isNew, int sellingPrice, String make, String year, String model, String color)
+    public Car (int carID, boolean isNew, int sellingPrice, String make, String year, String model, String color)
     {
         this.carID = carID;
         this.isNew = isNew;

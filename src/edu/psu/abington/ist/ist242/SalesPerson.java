@@ -26,5 +26,13 @@ public class SalesPerson extends User {
             salesTeam.remove(this);
         }
 
+    public static void printSalesTeam(ArrayList<SalesPerson> salesTeam){
+        for (SalesPerson sp: salesTeam){
+            System.out.println("Sales Person Id:" + sp.getID());
+            System.out.println("Sales Person Name:" + sp.getName());
+            System.out.println("Sales Person Email:" + sp.geteMail());
+            System.out.println("Sales Person Address:" + sp.getAddress());
+        }
+    }
 
 }
