@@ -46,24 +46,26 @@ public class Main {
         System.out.println("Welcome to Car Dealership Program!");
         System.out.println("Please select from the following options:");
 
-        System.out.println("Enter 1 to Login");
-        System.out.println("Enter q to Quit");
-        int a = Menu.callmenu(1);
-        if (a == 1) {
+
+        char c = getAction("Enter L to Login \nEnter q to Quit");
+      //  int a = Menu.callmenu(1);
+        if (c == 'l') {
             int i = login (customerList, salesTeam);
-                if (i ==1)
-                {
-                    System.out.println("Customer menu:");
-                }
+            if (i ==1)
+            {
+                System.out.println("Customer menu:");
+                Menu.customerMenu();
+            }
             else if (i == 2)
             {
                 System.out.println("Sales person menu:");
+                Menu.salesPersonMenu();
             }
             else
                 {
                     System.out.println("You are not logged in.");
                 }
-                    System.out.println("Enter 1 to view current cars in car inventory");
+                  /*  System.out.println("Enter 1 to view current cars in car inventory");
                     System.out.println("Enter 2 to do option 2");
                     System.out.println("Enter 3 to do option 3");
                     System.out.println("Enter 4 to do option 4");
@@ -81,7 +83,7 @@ public class Main {
                     } else if (b == 4) {
                         //This is option 4
                         System.out.print("Option: " + b);
-                    }
+                    }*/
                 }
         }
 
@@ -92,6 +94,7 @@ public class Main {
         System.out.println(prompt);
         answer = scnr.nextLine().toLowerCase() + " ";
         char firstChar = answer.charAt(0);
+        if (firstChar == 'q') System.exit(0);
         return firstChar;
     }
 

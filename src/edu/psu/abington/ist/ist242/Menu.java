@@ -30,4 +30,14 @@ public class Menu {
         }
         return null;
     }
+
+    public static void salesPersonMenu()
+    {
+        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory");
+    }
+
+    public static void customerMenu()
+    {
+        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info");
+    }
 }
