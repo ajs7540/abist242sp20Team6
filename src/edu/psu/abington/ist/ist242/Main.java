@@ -58,12 +58,12 @@ public class Main {
             if (i ==1)
             {
                 System.out.println("Customer menu:");
-                Menu.customerMenu();
+                Menu.customerMenu(cars);
             }
             else if (i == 2)
             {
                 System.out.println("Sales person menu:");
-                Menu.salesPersonMenu();
+                Menu.salesPersonMenu(cars);
             }
             else
                 {
