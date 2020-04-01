@@ -13,13 +13,11 @@ import java.util.ArrayList;
 
 public class User {
 
-    public int userID = 1;
+    public int userID;
     public String userName;
     public String Address;
     public String eMail;
     public String passWord;
-
-    private String[][] accounts = {{"anthony", "supernova"},{"steve", "java1"}};
 
     public User(int userID, String userName, String passWord,
                     String eMail, String Address)

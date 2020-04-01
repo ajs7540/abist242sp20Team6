@@ -43,9 +43,9 @@ public class SalesPerson extends User {
             return lastName;
         }
 
-        public void addSalesPerson(SalesPerson salesMan, ArrayList<SalesPerson> salesTeam)
+        public void addSalesPerson(ArrayList<SalesPerson> salesTeam)
         {
-            salesTeam.add(salesMan);
+            salesTeam.add(this);
 
         }
 

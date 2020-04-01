@@ -20,9 +20,9 @@ public class Customer extends User {
         this.creditScore = creditScore;
     }
 
-    public void addCustomer(Customer customer, ArrayList<Customer> customerList)
+    public void addCustomer(ArrayList<Customer> customerList)
     {
-        customerList.add(customer);
+        customerList.add(this);
     }
 
     public void deleteCustomer(Customer customer, ArrayList<Customer> customerList)

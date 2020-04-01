@@ -18,6 +18,31 @@ public class Main {
         ArrayList<Customer> customerList = new ArrayList<>();
         ArrayList<SalesPerson> salesTeam = new ArrayList<>();
 
+        Customer cust1 = new Customer(1, "john", "john1", "john@email.com", "1 some street, PA", 700 );
+        Customer cust2 = new Customer(2, "anna", "anna1", "anna@email.com", "2 some street, PA", 701 );
+        Customer cust3 = new Customer(3, "pete", "pete1", "pete@email.com", "3 some street, PA", 702 );
+        Customer cust4 = new Customer(4, "sarah", "sarah1", "sarah@email.com", "4 some street, PA", 703 );
+        Customer cust5 = new Customer(5, "mat", "mat1", "mat@email.com", "5 some street, PA", 704 );
+
+        cust1.addCustomer(customerList);
+        cust2.addCustomer(customerList);
+        cust3.addCustomer(customerList);
+        cust4.addCustomer(customerList);
+        cust5.addCustomer(customerList);
+
+        SalesPerson sp1 = new SalesPerson(1,"kate", "kate1", "kate@email.com", "1 other street, PA");
+        SalesPerson sp2 = new SalesPerson(2,"sam", "sam1", "sam@email.com", "2 other street, PA");
+        SalesPerson sp3 = new SalesPerson(3,"emma", "emma1", "emma@email.com", "3 other street, PA");
+        SalesPerson sp4 = new SalesPerson(4,"max", "max1", "max@email.com", "4 other street, PA");
+        SalesPerson sp5 = new SalesPerson(5,"ari", "ari1", "ari@email.com", "5 other street, PA");
+
+        sp1.addSalesPerson(salesTeam);
+        sp2.addSalesPerson(salesTeam);
+        sp3.addSalesPerson(salesTeam);
+        sp4.addSalesPerson(salesTeam);
+        sp5.addSalesPerson(salesTeam);
+
+
         System.out.println("Welcome to Car Dealership Program!");
         System.out.println("Please select from the following options");
 
