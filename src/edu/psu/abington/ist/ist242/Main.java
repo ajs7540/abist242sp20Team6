@@ -63,7 +63,7 @@ public class Main {
                 System.out.println("Password: ");
                 password = sc.nextLine();
 
-                if ( User.checkPassword(username,password, customerList, salesTeam)) {
+                if (User.checkPassword(username,password, customerList, salesTeam)) {
                     System.out.println("You are logged in!");
                     i = 3;
                     System.out.println("Enter 1 to view current cars in car inventory");

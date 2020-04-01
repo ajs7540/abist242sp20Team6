@@ -19,8 +19,7 @@ public class User {
     public String eMail;
     public String passWord;
 
-    public User(int userID, String userName, String passWord,
-                    String eMail, String Address)
+    public User(int userID, String userName, String passWord, String eMail, String Address)
     {
         this.userID = userID;
         this.userName = userName;
@@ -30,6 +29,26 @@ public class User {
 
     }
 
+    public String getPassword()
+    {
+        return passWord;
+    }
+
+    public String getUserName()
+    {
+        return userName;
+
+    }
+
+    public String geteMail()
+    {
+        return eMail;
+    }
+
+    public String getAddress()
+    {
+        return Address;
+    }
 
     public static boolean checkPassword(String username, String password, ArrayList<Customer> customerList, ArrayList<SalesPerson> salesTeam )
     {

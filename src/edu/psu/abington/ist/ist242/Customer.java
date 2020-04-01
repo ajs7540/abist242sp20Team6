@@ -25,9 +25,9 @@ public class Customer extends User {
         customerList.add(this);
     }
 
-    public void deleteCustomer(Customer customer, ArrayList<Customer> customerList)
+    public void deleteCustomer(ArrayList<Customer> customerList)
     {
-        customerList.remove(customer);
+        customerList.remove(this);
     }
 
     public int getCreditScore()
