@@ -35,4 +35,15 @@ public class SalesPerson extends User {
         }
     }
 
+    public static boolean checkPassword(String username, String password, ArrayList<SalesPerson> salesTeam ) {
+        boolean found = false;
+            for (SalesPerson sp : salesTeam) {
+                if (sp.userName.equals(username) && sp.passWord.equals(password)) {
+                    found = true;
+                    break;
+                }
+            }
+        return found;
+    }
+
 }

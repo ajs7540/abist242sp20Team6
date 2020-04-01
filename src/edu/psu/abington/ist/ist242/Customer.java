@@ -43,4 +43,14 @@ public class Customer extends User {
             System.out.println("Customer Address:" + cust.getAddress());
         }
     }
+    public static boolean checkPassword(String username, String password, ArrayList<Customer> customerList) {
+        boolean found = false;
+        for (Customer cust : customerList) {
+            if (cust.userName.equals(username) && cust.passWord.equals(password)) {
+                found = true;
+                break;
+            }
+        }
+        return found;
+    }
 }

@@ -54,24 +54,4 @@ public class User {
     {
         return Address;
     }
-
-    public static boolean checkPassword(String username, String password, ArrayList<Customer> customerList, ArrayList<SalesPerson> salesTeam ) {
-        boolean found = false;
-        for (Customer cust : customerList) {
-            if (cust.userName.equals(username) && cust.passWord.equals(password)) {
-                found = true;
-                break;
-            }
-        }
-        if (!found) {
-            for (SalesPerson sp : salesTeam) {
-                if (sp.userName.equals(username) && sp.passWord.equals(password)) {
-                    found = true;
-                    break;
-                }
-            }
-        }
-
-        return found;
-    }
 }
