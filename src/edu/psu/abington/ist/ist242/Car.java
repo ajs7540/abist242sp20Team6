@@ -10,18 +10,19 @@ Revision: 0
 package edu.psu.abington.ist.ist242;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Car {
     int carID, sellingPrice, year;
     boolean isNew;
     String make, model;
-    private ArrayList <Car>newCars;
-    private ArrayList <Car>oldCars;
+  /*  private ArrayList <Car>newCars;
+    private ArrayList <Car>oldCars;*/
     Color color;
 
     enum Color
     {
-        RED, GREEN, BLUE, BLACK, WHITE;
+        RED, GREEN, BLUE, WHITE;
     }
 
     public Car (int carID, boolean isNew, int sellingPrice, String make, int year, String model, Color color)
@@ -48,31 +49,73 @@ public class Car {
 
     }
 
-    public void oldCarsInventory(){
+  /*  public void oldCarsInventory(){
         oldCars = new ArrayList<>();
     }
 
     public void newCarsInventory(){
         newCars = new ArrayList<>();
     }
+*/
+
+    public static Car addNewCar(int carID)
+    {
+        Scanner scnr = new Scanner(System.in);
+        int sellingPrice, year;
+        boolean isNew;
+        String make, model;
+        Color color = Color.BLUE;
+
+        if (Main.getAction("Is it new? 'y'es/ 'n'o: ") =='y') isNew = true;
+        else isNew = false;
+
+        System.out.println("Enter selling Price: ");
+        sellingPrice = scnr.nextInt();
+
+        System.out.println("Enter make: ");
+        make = scnr.nextLine();
+
+        System.out.println("Enter year: ");
+        year = scnr.nextInt();
+
+        System.out.println("Enter model: ");
+        model = scnr.nextLine();
+
+        char c = Main.getAction("Enter color 'R'ED, 'G'REEN, 'B'LUE, or 'W'HITE: ");
+        switch (c)
+        {
+            case 'r':
+                color = Color.RED;
+                break;
+            case 'g':
+                color = Color.GREEN;
+                break;
+            case 'b':
+                color = Color.BLUE;
+                break;
+            case 'w':
+                color = Color.WHITE;
+                break;
+        }
+
+        Car car = new Car(carID, isNew, sellingPrice, make, year, model, color);
+        return car;
+    }
 
     public void addCar(ArrayList <Car> cars)
     {
         cars.add(this);
     }
-    public void removeCar(Car car1){
-            if (isNew) {
-                newCars.remove(car1);
-            }
-            else{
-                oldCars.remove(car1);
-            }
-        }
+    public void removeCar(ArrayList <Car> cars)
+    {
+        cars.remove(this);
+    }
 
         public static void printInventory (ArrayList <Car> cars)
         {
             for (Car car: cars){
                 Car.getCarDetails(car);
+                System.out.println();
             }
         }
     }

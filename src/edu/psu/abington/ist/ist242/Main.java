@@ -19,8 +19,18 @@ public class Main {
         ArrayList<SalesPerson> salesTeam = new ArrayList<>();
         ArrayList<Order> orders = new ArrayList<>();
         ArrayList <Car> cars = new ArrayList<>();
+
         Car car1 = new Car(1, true, 7000, "Toyota", 2017, "Camry", Car.Color.BLUE);
+        Car car2 = new Car(2, false, 8000, "Honda", 2016, "Civic", Car.Color.WHITE);
+        Car car3 = new Car(3, true, 6500, "Ford", 2019, "Focus", Car.Color.GREEN);
+        Car car4 = new Car(4, false, 9300, "Honda", 2015, "Accord", Car.Color.RED);
+        Car car5 = new Car(5, true, 7200, "Toyota", 2019, "Corolla", Car.Color.BLUE);
         car1.addCar(cars);
+        car2.addCar(cars);
+        car3.addCar(cars);
+        car4.addCar(cars);
+        car5.addCar(cars);
+
 
         Customer cust1 = new Customer(1, "john", "john1", "john@email.com", "1 some street, PA", 700);
         Customer cust2 = new Customer(2, "anna", "anna1", "anna@email.com", "2 some street, PA", 701);
@@ -57,12 +67,12 @@ public class Main {
             int i = login (customerList, salesTeam);
             if (i ==1)
             {
-                System.out.println("Customer menu:");
+                System.out.println("-----------Customer menu-----------");
                 Menu.customerMenu(cars);
             }
             else if (i == 2)
             {
-                System.out.println("Sales person menu:");
+                System.out.println("-----------Sales person menu-----------");
                 Menu.salesPersonMenu(cars);
             }
             else

@@ -34,23 +34,36 @@ public class Menu {
     public static void salesPersonMenu(ArrayList<Car> cars)
     {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory");
-        switch (c)
-        {
-            case 'v':
-                Car.printInventory(cars);
-                break;
+        while(c!='q') {
+            switch (c) {
+                case 'v':
+                    Car.printInventory(cars);
+                    break;
+                case 'a':
+                    cars.add(Car.addNewCar(cars.get(cars.size() - 1).carID + 1));
+                    break;
+                case 'r':
+                    Car.printInventory(cars);
+                    System.out.println("Type in car ID to remove: ");
+                    Scanner scnr = new Scanner(System.in);
+                    int id = scnr.nextInt();
+                    cars.get(id - 1).removeCar(cars);
+                    break;
+            }
+            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory");
         }
-
     }
 
     public static void customerMenu(ArrayList<Car> cars)
     {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info");
-        switch (c)
-        {
-            case 'v':
-                Car.printInventory(cars);
-                break;
+        while(c!='q') {
+            switch (c) {
+                case 'v':
+                    Car.printInventory(cars);
+                    break;
+            }
+            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info");
         }
     }
 }
