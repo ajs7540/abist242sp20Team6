@@ -56,14 +56,18 @@ public class Menu {
 
     public static void customerMenu(ArrayList<Car> cars)
     {
-        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info");
+        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
         while(c!='q') {
             switch (c) {
                 case 'v':
                     Car.printInventory(cars);
                     break;
+
+                case 'p':
+                    Car.purchaseMenu(cars);
+
             }
-            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info");
         }
+        c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info");
     }
 }

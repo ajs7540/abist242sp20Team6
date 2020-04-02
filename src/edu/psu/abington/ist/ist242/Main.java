@@ -64,7 +64,7 @@ public class Main {
         char c = getAction("Enter L to Login \nEnter q to Quit");
       //  int a = Menu.callmenu(1);
         if (c == 'l') {
-            int i = login (customerList, salesTeam);
+            int i = login(customerList, salesTeam);
             if (i ==1)
             {
                 System.out.println("-----------Customer menu-----------");

@@ -111,12 +111,25 @@ public class Car {
         cars.remove(this);
     }
 
-        public static void printInventory (ArrayList <Car> cars)
-        {
-            for (Car car: cars){
+        public static void printInventory (ArrayList <Car> cars) {
+            for (Car car : cars) {
                 Car.getCarDetails(car);
                 System.out.println();
             }
+        }
+
+        public static void purchaseMenu (ArrayList <Car> cars)
+            {
+                int carQuantity = 0;
+                int option = 0;
+                for (Car car: cars){
+                    carQuantity++;
+                }
+                for (Car car : cars) {
+                    Car.getCarDetails(car);
+                    System.out.println();
+                }
+                option = Menu.callmenu(carQuantity);
         }
     }
 
