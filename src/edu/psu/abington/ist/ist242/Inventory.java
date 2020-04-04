@@ -10,4 +10,34 @@ Revision: 0
 package edu.psu.abington.ist.ist242;
 
 public class Inventory {
+
+    private int inventoryId;
+    private Car Car;
+
+    //Constructor Method
+    public Inventory(int _inventoryId, Car _Car){
+        this.inventoryId = _inventoryId;
+        this.Car = _Car;
+    }
+
+    // Setters
+    public void setInventoryId(int inventoryId) {
+        this.inventoryId = inventoryId;
+    }
+    public void setCar(edu.psu.abington.ist.ist242.Car car) {
+        Car = car;
+    }
+
+    // Getters
+    public edu.psu.abington.ist.ist242.Car getCar() {
+        return Car;
+    }
+
+    @Override
+    public String toString() {
+        return "Inventory{" +
+                "inventoryId=" + inventoryId +
+                ", Car=" + Car +
+                '}';
+    }
 }
