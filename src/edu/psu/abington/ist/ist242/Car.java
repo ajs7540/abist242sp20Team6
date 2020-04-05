@@ -72,11 +72,12 @@ public class Car {
         System.out.println("Enter selling Price: ");
         sellingPrice = scnr.nextInt();
 
-        System.out.println("Enter make: ");
-        make = scnr.nextLine();
-
         System.out.println("Enter year: ");
         year = scnr.nextInt();
+
+        System.out.println("Enter make: ");
+        make = scnr.nextLine();
+        make = scnr.nextLine();
 
         System.out.println("Enter model: ");
         model = scnr.nextLine();
