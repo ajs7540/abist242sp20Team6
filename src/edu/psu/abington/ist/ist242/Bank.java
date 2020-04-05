@@ -25,11 +25,15 @@ public class Bank {
         this.cScore = cScore;
     }
 
-    public void checkCreditScore() {
+    public boolean checkCreditScore() {
+        boolean approved = false;
         if (cScore >= 650 && cScore <= 850) {
+            approved = true;
             System.out.println("Credit Approved");
         } else if (cScore < 650) {
+            approved = false;
             System.out.println("Credit denied");
         }
+        return approved;
     }
 }
