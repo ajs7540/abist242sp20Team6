@@ -10,24 +10,31 @@ Revision: 0
 package edu.psu.abington.ist.ist242;
 import java.util.Scanner;
 
-public class Bank {
+public class Bank extends Customer {
     int bankID;
     int cScore;
 
-    public Bank(int bankID, int cScore) {
-        this.bankID = bankID;
-        this.cScore = cScore;
+    /*public Bank(int userID, String userName, String passWord, String eMail, String Address, int creditScore) {
+        super(userID, userName, passWord, eMail, Address, creditScore);
+    }*/
+
+    public int getbankID() {
+        return bankID;
     }
 
-    public int getCustomerCreditScore() {
+    public int getcScore() {
         return cScore;
     }
 
-    public void checkCustomerCreditScore() {
-        if (cScore >= 650 && cScore <= 850) {
+    public void setcScore(int cScore) {
+        this.cScore = cScore;
+    }
+
+    public void checkcScore() { //customer class needs customers
+        if (Customer.creditScore >= 650 && Customer.creditScore <= 850) {
             //Customer approved
         }
-        else if (cScore < 650) {
+        else if (Customer.creditScore < 650) {
             //Customer denied
         }
     }
