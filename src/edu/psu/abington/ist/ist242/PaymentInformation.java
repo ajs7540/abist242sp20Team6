@@ -34,7 +34,7 @@ public void setPaymentDate(){
 }
 public void updatePayment(){
 
-    ///need to consult with team
+    PaymentInformation paymentInformation = new PaymentInformation();
 
 }
 public void getPaymentInformation () {

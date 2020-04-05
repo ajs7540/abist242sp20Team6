@@ -10,15 +10,22 @@ Revision: 0
 package edu.psu.abington.ist.ist242;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Car {
-    int carID, sellingPrice;
+    int carID, sellingPrice, year;
     boolean isNew;
-    String make, year, model, color;
-    private ArrayList <Car>newCars;
-    private ArrayList <Car>oldCars;
+    String make, model;
+  /*  private ArrayList <Car>newCars;
+    private ArrayList <Car>oldCars;*/
+    Color color;
 
-    public void setCarDetails (int carID, boolean isNew, int sellingPrice, String make, String year, String model, String color)
+    enum Color
+    {
+        RED, GREEN, BLUE, WHITE;
+    }
+
+    public Car (int carID, boolean isNew, int sellingPrice, String make, int year, String model, Color color)
     {
         this.carID = carID;
         this.isNew = isNew;
@@ -29,41 +36,101 @@ public class Car {
         this.color = color;
     }
 
-    public void getCarDetails ()
+    public static void getCarDetails (Car car)
     {
-        System.out.println("Car ID: "+ carID);
+        System.out.println("Car ID: "+ car.carID);
         System.out.print("it is ");
-        if (isNew) System.out.println("New");
+        if (car.isNew) System.out.println("New");
         else System.out.println("Used");
-        System.out.println("Selling Price: "+ sellingPrice);
-        System.out.println("Make: "+ make);
-        System.out.println("Model: "+ model);
-        System.out.println("Year: "+ year);
+        System.out.println("Selling Price: "+ car.sellingPrice);
+        System.out.println("Make: "+ car.make);
+        System.out.println("Model: "+ car.model);
+        System.out.println("Year: "+ car.year);
 
     }
 
-    public void oldCarsInventory(){
+  /*  public void oldCarsInventory(){
         oldCars = new ArrayList<>();
     }
 
     public void newCarsInventory(){
         newCars = new ArrayList<>();
     }
+*/
 
-    public void addCar(Car car1) {
-        if (isNew) {
-            newCars.add(car1);
-        } else {
-            oldCars.add(car1);
+    public static Car addNewCar(int carID)
+    {
+        Scanner scnr = new Scanner(System.in);
+        int sellingPrice, year;
+        boolean isNew;
+        String make, model;
+        Color color = Color.BLUE;
+
+        if (Main.getAction("Is it new? 'y'es/ 'n'o: ") =='y') isNew = true;
+        else isNew = false;
+
+        System.out.println("Enter selling Price: ");
+        sellingPrice = scnr.nextInt();
+
+        System.out.println("Enter year: ");
+        year = scnr.nextInt();
+
+        System.out.println("Enter make: ");
+        make = scnr.nextLine();
+        make = scnr.nextLine();
+
+        System.out.println("Enter model: ");
+        model = scnr.nextLine();
+
+        char c = Main.getAction("Enter color 'R'ED, 'G'REEN, 'B'LUE, or 'W'HITE: ");
+        switch (c)
+        {
+            case 'r':
+                color = Color.RED;
+                break;
+            case 'g':
+                color = Color.GREEN;
+                break;
+            case 'b':
+                color = Color.BLUE;
+                break;
+            case 'w':
+                color = Color.WHITE;
+                break;
         }
+
+        Car car = new Car(carID, isNew, sellingPrice, make, year, model, color);
+        return car;
     }
-    public void removeCar(Car car1){
-            if (isNew) {
-                newCars.remove(car1);
+
+    public void addCar(ArrayList <Car> cars)
+    {
+        cars.add(this);
+    }
+    public void removeCar(ArrayList <Car> cars)
+    {
+        cars.remove(this);
+    }
+
+        public static void printInventory (ArrayList <Car> cars) {
+            for (Car car : cars) {
+                Car.getCarDetails(car);
+                System.out.println();
             }
-            else{
-                oldCars.remove(car1);
-            }
+        }
+
+        public static void purchaseMenu (ArrayList <Car> cars)
+            {
+                int carQuantity = 0;
+                int option = 0;
+                for (Car car: cars){
+                    carQuantity++;
+                }
+                for (Car car : cars) {
+                    Car.getCarDetails(car);
+                    System.out.println();
+                }
+                option = Menu.callmenu(carQuantity);
         }
     }
 

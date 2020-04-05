@@ -11,50 +11,39 @@ package edu.psu.abington.ist.ist242;
 import java.util.ArrayList;
 public class SalesPerson extends User {
 
-    int salesID;
-    String firstName, lastName, salesPassword;
-    private ArrayList<SalesPerson>salesTeam;
-
     public SalesPerson(int userID, String userName, String passWord, String eMail, String Address) {
         super(userID, userName, passWord, eMail, Address);
     }
 
-    public void setSalesPerson(String fname, String lname, int salesID , String sPass)
-
+        public void addSalesPerson(ArrayList<SalesPerson> salesTeam)
         {
-            this.firstName = fname;
-            this.lastName = lname;
-            this.salesID =salesID;
-            this.salesPassword = sPass;
-        }
-
-        public String getSalesPassword() {
-
-            return salesPassword;
-        }
-
-        public String getFirstName() {
-
-            return firstName;
+            salesTeam.add(this);
 
         }
 
-        public String getLastName() {
-
-            return lastName;
+        public void removeSalesPerson(ArrayList<SalesPerson> salesTeam)
+        {
+            salesTeam.remove(this);
         }
 
-        public void addSalesPerson(SalesPerson salesMan){
-
-            salesTeam.add(salesMan);
-
+    public static void printSalesTeam(ArrayList<SalesPerson> salesTeam){
+        for (SalesPerson sp: salesTeam){
+            System.out.println("Sales Person Id:" + sp.getID());
+            System.out.println("Sales Person Name:" + sp.getName());
+            System.out.println("Sales Person Email:" + sp.geteMail());
+            System.out.println("Sales Person Address:" + sp.getAddress());
         }
+    }
 
-        public void removeSalesPerson(SalesPerson salesMan){
-
-            salesTeam.remove(salesMan);
-
-        }
-
+    public static boolean checkPassword(String username, String password, ArrayList<SalesPerson> salesTeam ) {
+        boolean found = false;
+            for (SalesPerson sp : salesTeam) {
+                if (sp.userName.equals(username) && sp.passWord.equals(password)) {
+                    found = true;
+                    break;
+                }
+            }
+        return found;
+    }
 
 }

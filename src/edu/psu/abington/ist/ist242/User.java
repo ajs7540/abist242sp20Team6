@@ -9,18 +9,17 @@ Revision: 0
 */
 package edu.psu.abington.ist.ist242;
 
+import java.util.ArrayList;
+
 public class User {
 
-    public int userID = 1;
+    public int userID;
     public String userName;
     public String Address;
     public String eMail;
     public String passWord;
 
-    private String[][] accounts = {{"anthony", "supernova"},{"steve", "java1"}};
-
-    public User(int userID, String userName, String passWord,
-                    String eMail, String Address)
+    public User(int userID, String userName, String passWord, String eMail, String Address)
     {
         this.userID = userID;
         this.userName = userName;
@@ -30,11 +29,29 @@ public class User {
 
     }
 
-    public boolean checkPassword(String username, String password)
+    public int getID()
     {
-        if((username.equals(accounts[0][0])) && (password.equals(accounts[0][1])) || (username.equals(accounts[1][0])) && (password.equals(accounts[1][1])))
-            return true;
-        else
-            return false;
+        return userID;
+    }
+
+    public String getPassword()
+    {
+        return passWord;
+    }
+
+    public String getName()
+    {
+        return userName;
+
+    }
+
+    public String geteMail()
+    {
+        return eMail;
+    }
+
+    public String getAddress()
+    {
+        return Address;
     }
 }

@@ -15,26 +15,42 @@ import java.util.Scanner;
 public class Customer extends User {
     int creditScore;
 
-    ArrayList<Customer> CustomerList = new ArrayList<>();
-
-
     public Customer(int userID, String userName, String passWord, String eMail, String Address, int creditScore) {
         super(userID, userName, passWord, eMail, Address);
         this.creditScore = creditScore;
     }
 
-    public void addCustomer(int userID, String userName, String passWord, String eMail, String Address, int creditScore)
+    public void addCustomer(ArrayList<Customer> customerList)
     {
-        new Customer(userID, userName, passWord, eMail, Address, creditScore);
+        customerList.add(this);
     }
 
-    public void deleteCustomer(int userID)
+    public void deleteCustomer(ArrayList<Customer> customerList)
     {
-
+        customerList.remove(this);
     }
 
-    public void editCustomer(int userID)
+    public int getCreditScore()
     {
+        return creditScore;
+    }
 
+    public static void printCustomers(ArrayList<Customer> cList){
+        for (Customer cust: cList){
+            System.out.println("Customer Id:" + cust.getID());
+            System.out.println("Customer Name:" + cust.getName());
+            System.out.println("Customer Email:" + cust.geteMail());
+            System.out.println("Customer Address:" + cust.getAddress());
+        }
+    }
+    public static boolean checkPassword(String username, String password, ArrayList<Customer> customerList) {
+        boolean found = false;
+        for (Customer cust : customerList) {
+            if (cust.userName.equals(username) && cust.passWord.equals(password)) {
+                found = true;
+                break;
+            }
+        }
+        return found;
     }
 }
