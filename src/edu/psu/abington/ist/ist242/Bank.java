@@ -8,15 +8,10 @@ Last Date Changed:
 Revision: 0
 */
 package edu.psu.abington.ist.ist242;
-import java.util.Scanner;
 
-public class Bank extends Customer {
-    int bankID;
+public class Bank {
+    int bankID = 1;
     int cScore;
-
-    /*public Bank(int userID, String userName, String passWord, String eMail, String Address, int creditScore) {
-        super(userID, userName, passWord, eMail, Address, creditScore);
-    }*/
 
     public int getbankID() {
         return bankID;
@@ -30,12 +25,11 @@ public class Bank extends Customer {
         this.cScore = cScore;
     }
 
-    public void checkcScore() { //customer class needs customers
-        if (Customer.creditScore >= 650 && Customer.creditScore <= 850) {
-            //Customer approved
-        }
-        else if (Customer.creditScore < 650) {
-            //Customer denied
+    public void checkCreditScore() {
+        if (cScore >= 650 && cScore <= 850) {
+            System.out.println("Credit Approved");
+        } else if (cScore < 650) {
+            System.out.println("Credit denied");
         }
     }
 }
