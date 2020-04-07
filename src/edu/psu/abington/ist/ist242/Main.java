@@ -18,7 +18,7 @@ public class Main {
         ArrayList<Customer> customerList = new ArrayList<>();
         ArrayList<SalesPerson> salesTeam = new ArrayList<>();
         ArrayList<Order> orders = new ArrayList<>();
-        ArrayList <Car> cars = new ArrayList<>();
+        ArrayList<Car> cars = new ArrayList<>();
 
         Car car1 = new Car(1, true, 7000, "Toyota", 2017, "Camry", Car.Color.BLUE);
         Car car2 = new Car(2, false, 8000, "Honda", 2016, "Civic", Car.Color.WHITE);
@@ -68,7 +68,9 @@ public class Main {
             if (i ==1)
             {
                 System.out.println("-----------Customer menu-----------");
-                Menu.customerMenu(cars);
+                Order completedOrder = Menu.customerMenu(cars);
+                orders.add(completedOrder);
+                Order.printOrders(orders);
             }
             else if (i == 2)
             {

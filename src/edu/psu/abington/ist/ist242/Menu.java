@@ -46,7 +46,7 @@ public class Menu {
                     Car.printInventory(cars);
                     System.out.println("Type in car ID to remove: ");
                     Scanner scnr = new Scanner(System.in);
-                    int id = scnr.nextInt();
+                    int id = callmenu(cars.size());
                     cars.get(id - 1).removeCar(cars);
                     break;
             }
@@ -54,7 +54,7 @@ public class Menu {
         }
     }
 
-    public static void customerMenu(ArrayList<Car> cars)
+    public static Order customerMenu(ArrayList<Car> cars)
     {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
         while(c!='q') {
@@ -64,10 +64,29 @@ public class Menu {
                     break;
 
                 case 'p':
-                    Car.purchaseMenu(cars);
+
+                    int carQuantity = 0;
+                    int option = 0;
+                    for (Car car : cars) {
+                        carQuantity++;
+                    }
+                    for (Car car : cars) {
+                        Car.getCarDetails(car);
+                        System.out.println();
+                    }
+                    option = Menu.callmenu(carQuantity);
+                    Car.getCarDetails(cars.get(option - 1));
+                    Scanner scnr = new Scanner(System.in);
+                    System.out.println("Enter Date of Order ");
+                    String date;
+                    date = scnr.next();
+                    Car currentCar = cars.get(option - 1);
+                    Order order = new Order(date, currentCar);
+                    return order;
 
             }
+            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
         }
-        c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info");
+        return null;
     }
 }

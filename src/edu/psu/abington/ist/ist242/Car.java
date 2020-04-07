@@ -36,6 +36,10 @@ public class Car {
         this.color = color;
     }
 
+    public int getSellingPrice() {
+        return sellingPrice;
+    }
+
     public static void getCarDetails (Car car)
     {
         System.out.println("Car ID: "+ car.carID);
@@ -107,6 +111,7 @@ public class Car {
     {
         cars.add(this);
     }
+
     public void removeCar(ArrayList <Car> cars)
     {
         cars.remove(this);
@@ -119,18 +124,17 @@ public class Car {
             }
         }
 
-        public static void purchaseMenu (ArrayList <Car> cars)
-            {
-                int carQuantity = 0;
-                int option = 0;
-                for (Car car: cars){
-                    carQuantity++;
-                }
-                for (Car car : cars) {
-                    Car.getCarDetails(car);
-                    System.out.println();
-                }
-                option = Menu.callmenu(carQuantity);
-        }
+    @Override
+    public String toString() {
+        return "Car{" +
+                "carID=" + carID +
+                ", sellingPrice=" + sellingPrice +
+                ", year=" + year +
+                ", isNew=" + isNew +
+                ", make='" + make + '\'' +
+                ", model='" + model + '\'' +
+                ", color=" + color +
+                '}';
     }
+}
 
