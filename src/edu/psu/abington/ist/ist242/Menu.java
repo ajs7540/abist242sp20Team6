@@ -75,13 +75,13 @@ public class Menu {
                         System.out.println();
                     }
                     option = Menu.callmenu(carQuantity);
-                    Car.getCarDetails(cars.get(option - 1));
+                    Car.getCarDetails(cars.get(option - 1));  //user selected vic
                     Scanner scnr = new Scanner(System.in);
                     System.out.println("Enter Date of Order ");
                     String date;
                     date = scnr.next();
                     Car currentCar = cars.get(option - 1);
-                    Order order = new Order(date, currentCar);
+                    Order order = new Order(date, currentCar);      //creates a new order
                     return order;
 
             }

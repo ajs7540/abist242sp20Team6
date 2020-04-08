@@ -4,7 +4,7 @@ Purpose Details: A Application to manage a car dealership and customers buying c
 Course: IST242
 Author: Tom Fadelsak, William Perez, Amal Sabirov, Liliya Sadykova
 Date Developed: 3/12/20
-Last Date Changed:
+Last Date Changed: 4/7
 Revision: 0
 */
 package edu.psu.abington.ist.ist242;
@@ -21,7 +21,7 @@ public class Order{
     public Order(String date, Car car) {
         this.orderID++;
         this.date = date;
-        this.orderTotal = (car.sellingPrice * 1.08);
+        this.orderTotal = (car.sellingPrice * 1.08);  //Calc tax on creation
         this.car = car;
     }
 
@@ -29,7 +29,7 @@ public class Order{
     public String toString() {
         return "Order{" +
                 "date='" + date + '\'' +
-                ", orderTotal=$" + String.format("%.2f", orderTotal) +
+                ", orderTotal=$" + String.format("%.2f", orderTotal) + //Print total to two dec places
                 ", car=" + car +
                 '}';
     }
