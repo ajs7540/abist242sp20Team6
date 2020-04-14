@@ -25,6 +25,33 @@ public class Customer extends User {
         customerList.add(this);
     }
 
+    public static Customer addNewCustomer(int id,  ArrayList<Customer> customerList)
+    {
+        Scanner scnr = new Scanner(System.in);
+        String userName="", passWord="",  eMail="",  Address="";
+        int creditScore =0;
+        boolean found = false;
+
+        System.out.println("Enter username: ");
+        userName = scnr.nextLine();
+
+        System.out.println("Enter password: ");
+        passWord = scnr.nextLine();
+
+        System.out.println("Enter email: ");
+        eMail = scnr.nextLine();
+
+        System.out.println("Enter address: ");
+        Address = scnr.nextLine();
+
+        System.out.println("Enter your credit score: ");
+        creditScore = scnr.nextInt();
+
+        Customer c1 = new Customer(id, userName,passWord,eMail,Address,creditScore);
+
+        return c1;
+    }
+
     public void deleteCustomer(ArrayList<Customer> customerList)
     {
         customerList.remove(this);

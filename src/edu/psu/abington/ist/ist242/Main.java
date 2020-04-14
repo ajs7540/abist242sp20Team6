@@ -61,7 +61,7 @@ public class Main {
         System.out.println("Please select from the following options:");
 
 
-        char c = getAction("Enter L to Login \nEnter q to Quit");
+        char c = getAction("Enter L to Login \nEnter c to create account \nEnter q to Quit");
       //  int a = Menu.callmenu(1);
         if (c == 'l') {
             int i = login(customerList, salesTeam);
@@ -101,6 +101,15 @@ public class Main {
                         System.out.print("Option: " + b);
                     }*/
                 }
+        else if (c=='c')
+        {
+            customerList.add(Customer.addNewCustomer(customerList.size()-1, customerList));
+            System.out.println("-----------Customer menu-----------");
+            Order completedOrder = Menu.customerMenu(cars);
+            orders.add(completedOrder);
+            Order.printOrders(orders);
+        }
+
         }
 
 
