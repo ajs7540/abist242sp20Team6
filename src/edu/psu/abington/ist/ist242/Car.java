@@ -53,14 +53,7 @@ public class Car {
 
     }
 
-  /*  public void oldCarsInventory(){
-        oldCars = new ArrayList<>();
-    }
 
-    public void newCarsInventory(){
-        newCars = new ArrayList<>();
-    }
-*/
 
     public static Car addNewCar(int carID)
     {

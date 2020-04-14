@@ -34,6 +34,13 @@ public class Customer extends User {
     {
         return creditScore;
     }
+    public void setCustomerEmail(String eMail){
+        this.eMail = eMail;
+
+    }
+    public void setCustomerAddress(String address){
+        this.Address = address;
+    }
 
     public static void printCustomers(ArrayList<Customer> cList){
         for (Customer cust: cList){

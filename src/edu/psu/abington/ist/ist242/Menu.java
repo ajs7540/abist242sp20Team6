@@ -114,7 +114,7 @@ public class Menu {
         }
     }
 
-    public static Order customerMenu(ArrayList<Car> cars)
+    public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList)
     {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
         while(c!='q') {
@@ -143,7 +143,19 @@ public class Menu {
                     Car currentCar = cars.get(option - 1);
                     Order order = new Order(date, currentCar);      //creates a new order
                     return order;
-
+                case 'u':
+                    int customerIndex = callmenu(customerList.size())-1;
+                    System.out.println("Update: 'A'ddress, 'E'mail, or 'Q'uit");
+                    Scanner in = new Scanner(System.in);
+                    if (in == 'A') {
+                        System.out.println("Please Enter your NEW Address: ");
+                        customerList.get(customerIndex).setCustomerAddress(scnr.nextLine());
+                    } else if (in == 'E') {
+                        System.out.println("Please Enter your NEW Email: ");
+                        customerList.get(customerIndex).setCustomerEmail(scnr.nextLine());
+                    } else if (in == 'Q') {
+                        break;
+                    }
             }
             c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
         }
