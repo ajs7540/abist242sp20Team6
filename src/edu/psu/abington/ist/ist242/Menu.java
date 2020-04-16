@@ -31,8 +31,8 @@ public class Menu {
         return null;
     }
 
-    public static void salesPersonMenu(ArrayList<Car> cars) {
-        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory");
+    public static void salesPersonMenu(ArrayList<Car> cars, ArrayList<Customer> customerList) {
+        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory \n'c'heck credit score");
         while (c != 'q') {
             switch (c) {
                 case 'v':
@@ -107,6 +107,16 @@ public class Menu {
                                 break;
                         }
                         promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu");
+                    }
+                case 'c':
+                    Customer.printCustomers(customerList);
+                    c = Main.getAction("Type in customer ID");
+                    int a = Integer.parseInt(String.valueOf(c));
+                    for (Customer cust : customerList) {
+                        if (cust.userID == a) {
+                            Bank.checkCreditScore(cust.creditScore);
+                            break;
+                        }
                     }
             }
             c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory");

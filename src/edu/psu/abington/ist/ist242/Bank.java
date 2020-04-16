@@ -25,7 +25,7 @@ public class Bank {
         this.cScore = cScore;
     }
 
-    public boolean checkCreditScore() {
+    public static boolean checkCreditScore(int cScore) {
         boolean approved = false;
         if (cScore >= 650 && cScore <= 850) {
             approved = true;

@@ -75,6 +75,7 @@ public class Customer extends User {
             System.out.println("Customer Name:" + cust.getName());
             System.out.println("Customer Email:" + cust.geteMail());
             System.out.println("Customer Address:" + cust.getAddress());
+            System.out.println();
         }
     }
     public static boolean checkPassword(String username, String password, ArrayList<Customer> customerList) {

@@ -32,7 +32,7 @@ public class Main {
         car5.addCar(cars);
 
 
-        Customer cust1 = new Customer(1, "john", "john1", "john@email.com", "1 some street, PA", 700);
+        Customer cust1 = new Customer(1, "john", "john1", "john@email.com", "1 some street, PA", 600);
         Customer cust2 = new Customer(2, "anna", "anna1", "anna@email.com", "2 some street, PA", 701);
         Customer cust3 = new Customer(3, "pete", "pete1", "pete@email.com", "3 some street, PA", 702);
         Customer cust4 = new Customer(4, "sarah", "sarah1", "sarah@email.com", "4 some street, PA", 703);
@@ -68,14 +68,14 @@ public class Main {
             if (i ==1)
             {
                 System.out.println("-----------Customer menu-----------");
-                Order completedOrder = Menu.customerMenu(cars);
+                Order completedOrder = Menu.customerMenu(cars, customerList);
                 orders.add(completedOrder);
                 Order.printOrders(orders);
             }
             else if (i == 2)
             {
                 System.out.println("-----------Sales person menu-----------");
-                Menu.salesPersonMenu(cars);
+                Menu.salesPersonMenu(cars, customerList);
             }
             else
                 {
@@ -90,7 +90,7 @@ public class Main {
                     if (b == 1) {
                         //This is option 1
                         System.out.print("Option: " + b);
-                    } else if (b == 2) {
+                    } else if (b == 2) {l
                         //This is option 2
                         System.out.print("Option: " + b);
                     } else if (b == 3) {
@@ -105,7 +105,7 @@ public class Main {
         {
             customerList.add(Customer.addNewCustomer(customerList.size()-1, customerList));
             System.out.println("-----------Customer menu-----------");
-            Order completedOrder = Menu.customerMenu(cars);
+            Order completedOrder = Menu.customerMenu(cars, customerList);
             orders.add(completedOrder);
             Order.printOrders(orders);
         }
