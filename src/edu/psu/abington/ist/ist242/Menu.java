@@ -25,16 +25,15 @@ public class Menu {
             }
 
             return userInputA;
-        } catch (Exception e){
+        } catch (Exception e) {
             System.exit(0);
         }
         return null;
     }
 
-    public static void salesPersonMenu(ArrayList<Car> cars)
-    {
+    public static void salesPersonMenu(ArrayList<Car> cars) {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory");
-        while(c!='q') {
+        while (c != 'q') {
             switch (c) {
                 case 'v':
                     Car.printInventory(cars);
@@ -52,11 +51,11 @@ public class Menu {
                 case 'e':
                     Car.printInventory(cars);
                     System.out.println("Select what car you would like to edit?");
-                    int carIndex = callmenu(cars.size())-1;  //get index of car from user.
+                    int carIndex = callmenu(cars.size()) - 1;  //get index of car from user.
 
                     char promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu");
                     Scanner scnr1 = new Scanner(System.in);
-                    while(promptInput !='m') {
+                    while (promptInput != 'm') {
                         switch (promptInput) {
                             case '1':
                                 System.out.println("Enter year:");
@@ -84,8 +83,7 @@ public class Menu {
                             case '5':
                                 char t = Main.getAction("Enter color 'R'ED, 'G'REEN, 'B'LUE, or 'W'HITE: ");
                                 Car.Color color;
-                                switch (t)
-                                {
+                                switch (t) {
                                     case 'r':
                                         cars.get(carIndex).setColor(Car.Color.RED);
                                         break;
@@ -98,7 +96,8 @@ public class Menu {
                                     case 'w':
                                         cars.get(carIndex).setColor(Car.Color.WHITE);
                                         break;
-                                    default: cars.get(carIndex).setColor(Car.Color.WHITE);  //input validation default to used
+                                    default:
+                                        cars.get(carIndex).setColor(Car.Color.WHITE);  //input validation default to used
                                         break;
                                 }
                                 break;
@@ -114,10 +113,9 @@ public class Menu {
         }
     }
 
-    public static Order customerMenu(ArrayList<Car> cars)
-    {
+    public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList) {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
-        while(c!='q') {
+        while (c != 'q') {
             switch (c) {
                 case 'v':
                     Car.printInventory(cars);
@@ -143,29 +141,25 @@ public class Menu {
                     Car currentCar = cars.get(option - 1);
                     Order order = new Order(date, currentCar);      //creates a new order
                     return order;
-                /*case 'u':
-                    int customerIndex = callmenu(customerList.size())-1;
+                case 'u':
+                    int customerIndex = callmenu(customerList.size()) - 1;
                     System.out.println("Update: 'A'ddress, 'E'mail, or 'Q'uit");
-                    Scanner in = new Scanner(System.in);
-                    if (in == 'A') {
+                    Scanner scnr2 = new Scanner(System.in);
+                    switch(customerIndex){
+                        case 'A':
                         System.out.println("Please Enter your NEW Address: ");
-                        customerList.get(customerIndex).setCustomerAddress(scnr.nextLine());
-                    } else if (in == 'E') {
+                        customerList.get(customerIndex).setCustomerAddress(scnr2.next());
+
+                        case 'E':
                         System.out.println("Please Enter your NEW Email: ");
-                        customerList.get(customerIndex).setCustomerEmail(scnr.nextLine());
-                    } else if (in == 'Q') {
+                        customerList.get(customerIndex).setCustomerEmail(scnr2.next());
+                        case 'Q':
                         break;
                     }
-            }
-            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
-        }
-        */
 
             }
             c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
         }
         return null;
     }
-
-
 }
