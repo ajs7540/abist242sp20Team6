@@ -9,6 +9,7 @@ Revision: 0
 */
 package edu.psu.abington.ist.ist242;
 
+import javax.xml.bind.annotation.XmlElementDecl;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -61,13 +62,6 @@ public class Customer extends User {
     {
         return creditScore;
     }
-    public void setCustomerEmail(String eMail){
-        this.eMail = eMail;
-
-    }
-    public void setCustomerAddress(String address){
-        this.Address = address;
-    }
 
     public static void printCustomers(ArrayList<Customer> cList){
         for (Customer cust: cList){
@@ -83,6 +77,7 @@ public class Customer extends User {
         for (Customer cust : customerList) {
             if (cust.userName.equals(username) && cust.passWord.equals(password)) {
                 found = true;
+                System.out.println(cust.userID);
                 break;
             }
         }

@@ -45,6 +45,14 @@ public class User {
 
     }
 
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public void seteMail(String eMail) {
+        this.eMail = eMail;
+    }
+
     public String geteMail()
     {
         return eMail;

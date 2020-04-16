@@ -166,7 +166,6 @@ public class Menu {
                         case 'Q':
                         break;
                     }
-
             }
             c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
         }
