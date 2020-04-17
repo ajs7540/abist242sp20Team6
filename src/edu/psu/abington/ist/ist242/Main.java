@@ -68,7 +68,7 @@ public class Main {
             if (i ==1)
             {
                 System.out.println("-----------Customer menu-----------");
-                Order completedOrder = Menu.customerMenu(cars, customerList);
+                Order completedOrder = Menu.customerMenu(cars, customerList, orders);
                 orders.add(completedOrder);
                 Order.printOrders(orders);
             }
@@ -105,7 +105,7 @@ public class Main {
         {
             customerList.add(Customer.addNewCustomer(customerList.size()-1, customerList));
             System.out.println("-----------Customer menu-----------");
-            Order completedOrder = Menu.customerMenu(cars, customerList);
+            Order completedOrder = Menu.customerMenu(cars, customerList, orders);
             orders.add(completedOrder);
             Order.printOrders(orders);
         }

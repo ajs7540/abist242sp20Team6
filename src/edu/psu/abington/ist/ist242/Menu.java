@@ -123,7 +123,7 @@ public class Menu {
         }
     }
 
-    public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList) {
+    public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList, ArrayList<Order> orders) {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
         while (c != 'q') {
             switch (c) {
@@ -132,7 +132,6 @@ public class Menu {
                     break;
 
                 case 'p':
-
                     int carQuantity = 0;
                     int option = 0;
                     for (Car car : cars) {
@@ -145,12 +144,13 @@ public class Menu {
                     option = Menu.callmenu(carQuantity);
                     Car.getCarDetails(cars.get(option - 1));  //user selected vic
                     Scanner scnr = new Scanner(System.in);
-                    System.out.println("Enter Date of Order ");
+                    System.out.println("Enter Date of Order (mm/dd/yyy)");
                     String date;
                     date = scnr.next();
                     Car currentCar = cars.get(option - 1);
-                    Order order = new Order(date, currentCar);      //creates a new order
-                    return order;
+                    Order order = new Order(date, currentCar);
+                    orders.add(order);//TODO Show IAN what i did
+
                 case 'u':
                     int customerIndex = callmenu(customerList.size()) - 1;
                     System.out.println("Update: 'A'ddress, 'E'mail, or 'Q'uit");
