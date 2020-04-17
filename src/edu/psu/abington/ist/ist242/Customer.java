@@ -69,6 +69,7 @@ public class Customer extends User {
             System.out.println("Customer Name:" + cust.getName());
             System.out.println("Customer Email:" + cust.geteMail());
             System.out.println("Customer Address:" + cust.getAddress());
+            System.out.println("Customer Score:" + cust.getCreditScore());
             System.out.println();
         }
     }

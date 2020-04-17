@@ -108,7 +108,7 @@ public class Menu {
                         }
                         promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu");
                     }
-                case 'c':
+                    case 'c':
                     Customer.printCustomers(customerList);
                     c = Main.getAction("Type in customer ID");
                     int a = Integer.parseInt(String.valueOf(c));
