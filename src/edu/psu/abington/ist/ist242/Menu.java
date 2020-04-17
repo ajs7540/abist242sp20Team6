@@ -149,7 +149,7 @@ public class Menu {
                     date = scnr.next();
                     Car currentCar = cars.get(option - 1);
                     Order order = new Order(date, currentCar);
-                    orders.add(order);//TODO Show IAN what i did
+                    orders.add(order);
 
                 case 'u':
                     int customerIndex = callmenu(customerList.size()) - 1;
