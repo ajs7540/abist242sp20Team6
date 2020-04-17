@@ -158,11 +158,11 @@ public class Menu {
                     switch(customerIndex){
                         case 'A':
                         System.out.println("Please Enter your NEW Address: ");
-                        customerList.get(customerIndex).setCustomerAddress(scnr2.next());
+                        customerList.get(customerIndex).setAddress(scnr2.next());
 
                         case 'E':
                         System.out.println("Please Enter your NEW Email: ");
-                        customerList.get(customerIndex).setCustomerEmail(scnr2.next());
+                        customerList.get(customerIndex).seteMail(scnr2.next());
                         case 'Q':
                         break;
                     }
