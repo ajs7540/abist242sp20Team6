@@ -62,7 +62,7 @@ public class Main {
         System.out.println("Please select from the following options:");
 
 
-        char c = getAction("Enter L to Login \nEnter c to create account \nEnter q to Quit");
+        char c = getAction("Enter L to Login \nEnter c to create account \nEnter q to Quit", "lcq");
         if (c == 'l') {
             int i = login(customerList, salesTeam);
             if (i ==1)
@@ -93,12 +93,16 @@ public class Main {
     }
 
 
-    public static char getAction(String prompt) {
+    public static char getAction(String prompt, String caseCheck) {
         Scanner scnr = new Scanner(System.in);
         String answer = "";
         System.out.println(prompt);
         answer = scnr.nextLine().toLowerCase() + " ";
         char firstChar = answer.charAt(0);
+        if (!caseCheck.contains(firstChar+"")){
+            System.out.println("Invalid input");
+            firstChar = getAction(prompt, caseCheck);
+        }
         if (firstChar == 'q') System.exit(0);
         return firstChar;
     }

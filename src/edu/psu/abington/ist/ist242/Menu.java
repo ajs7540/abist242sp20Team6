@@ -32,7 +32,7 @@ public class Menu {
     }
 
     public static void salesPersonMenu(ArrayList<Car> cars, ArrayList<Customer> customerList) {
-        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory \n'c'heck credit score");
+        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory \n'c'heck credit score", "qvaerc");
         while (c != 'q') {
             switch (c) {
                 case 'v':
@@ -52,7 +52,7 @@ public class Menu {
                     System.out.println("Select what car you would like to edit?");
                     int carIndex = callmenu(cars.size()) - 1;  //get index of car from user.
 
-                    char promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu");
+                    char promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu", "123456mq");
                     Scanner scnr1 = new Scanner(System.in);
                     while (promptInput != 'm') {
                         switch (promptInput) {
@@ -80,7 +80,7 @@ public class Menu {
                                 cars.get(carIndex).setModel(scnr1.next());
                                 break;
                             case '5':
-                                char t = Main.getAction("Enter color 'R'ED, 'G'REEN, 'B'LUE, or 'W'HITE: ");
+                                char t = Main.getAction("Enter color 'R'ED, 'G'REEN, 'B'LUE, or 'W'HITE: ", "rgbwq");
                                 Car.Color color;
                                 switch (t) {
                                     case 'r':
@@ -105,11 +105,11 @@ public class Menu {
                                 cars.get(carIndex).setSellingPrice(scnr1.nextInt());
                                 break;
                         }
-                        promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu");
+                        promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu", "123456mq");
                     }
                     case 'c':
                     Customer.printCustomers(customerList);
-                    c = Main.getAction("Type in customer ID");
+                    c = Main.getAction("Type in customer ID", "([\\d]+)+");
                     int a = Integer.parseInt(String.valueOf(c));
                     for (Customer cust : customerList) {
                         if (cust.userID == a) {
@@ -118,12 +118,12 @@ public class Menu {
                         }
                     }
             }
-            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory");
+            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory", "qvaer");
         }
     }
 
     public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList, ArrayList<Order> orders) {
-        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
+        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n", "qvup");
         while (c != 'q') {
             switch (c) {
                 case 'v':
@@ -166,7 +166,7 @@ public class Menu {
                         break;
                     }
             }
-            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n");
+            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n", "qvup");
         }
         return null;
     }
