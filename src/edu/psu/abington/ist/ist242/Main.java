@@ -25,6 +25,7 @@ public class Main {
         Car car3 = new Car(3, true, 6500, "Ford", 2019, "Focus", Car.Color.GREEN);
         Car car4 = new Car(4, false, 9300, "Honda", 2015, "Accord", Car.Color.RED);
         Car car5 = new Car(5, true, 7200, "Toyota", 2019, "Corolla", Car.Color.BLUE);
+
         car1.addCar(cars);
         car2.addCar(cars);
         car3.addCar(cars);
@@ -62,7 +63,6 @@ public class Main {
 
 
         char c = getAction("Enter L to Login \nEnter c to create account \nEnter q to Quit");
-      //  int a = Menu.callmenu(1);
         if (c == 'l') {
             int i = login(customerList, salesTeam);
             if (i ==1)
@@ -81,26 +81,7 @@ public class Main {
                 {
                     System.out.println("You are not logged in.");
                 }
-                  /*  System.out.println("Enter 1 to view current cars in car inventory");
-                    System.out.println("Enter 2 to do option 2");
-                    System.out.println("Enter 3 to do option 3");
-                    System.out.println("Enter 4 to do option 4");
-                    System.out.println("Enter q to Quit");
-                    int b = Menu.callmenu(4);
-                    if (b == 1) {
-                        //This is option 1
-                        System.out.print("Option: " + b);
-                    } else if (b == 2) {l
-                        //This is option 2
-                        System.out.print("Option: " + b);
-                    } else if (b == 3) {
-                        //This is option 3
-                        System.out.print("Option: " + b);
-                    } else if (b == 4) {
-                        //This is option 4
-                        System.out.print("Option: " + b);
-                    }*/
-                }
+        }
         else if (c=='c')
         {
             customerList.add(Customer.addNewCustomer(customerList.size()-1, customerList));
@@ -109,8 +90,7 @@ public class Main {
             orders.add(completedOrder);
             Order.printOrders(orders);
         }
-
-        }
+    }
 
 
     public static char getAction(String prompt) {

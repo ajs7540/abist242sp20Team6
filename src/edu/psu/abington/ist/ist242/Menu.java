@@ -44,7 +44,6 @@ public class Menu {
                 case 'r':
                     Car.printInventory(cars);
                     System.out.println("Type in car ID to remove: ");
-                    Scanner scnr = new Scanner(System.in);
                     int id = callmenu(cars.size());
                     cars.get(id - 1).removeCar(cars);
                     break;

@@ -16,8 +16,6 @@ public class Car {
     int carID, sellingPrice, year;
     boolean isNew;
     String make, model;
-  /*  private ArrayList <Car>newCars;
-    private ArrayList <Car>oldCars;*/
     Color color;
 
     enum Color
@@ -74,10 +72,11 @@ public class Car {
 
         System.out.println("Enter make: ");
         make = scnr.nextLine();
-        make = scnr.nextLine();
+        if (make.matches("\\n")){ make = scnr.nextLine();}
 
         System.out.println("Enter model: ");
         model = scnr.nextLine();
+        if (model.matches("\\n")){ model = scnr.nextLine();}
 
         char c = Main.getAction("Enter color 'R'ED, 'G'REEN, 'B'LUE, or 'W'HITE: ");
         switch (c)
