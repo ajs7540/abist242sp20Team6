@@ -61,7 +61,7 @@ public class Car {
         String make, model;
         Color color = Color.BLUE;
 
-        if (Main.getAction("Is it new? 'y'es/ 'n'o: ") =='y') isNew = true;
+        if (Main.getAction("Is it new? 'y'es/ 'n'o: ","yn") =='y') isNew = true;
         else isNew = false;
 
         System.out.println("Enter selling Price: ");
@@ -78,7 +78,7 @@ public class Car {
         model = scnr.nextLine();
         if (model.matches("\\n")){ model = scnr.nextLine();}
 
-        char c = Main.getAction("Enter color 'R'ED, 'G'REEN, 'B'LUE, or 'W'HITE: ");
+        char c = Main.getAction("Enter color 'R'ED, 'G'REEN, 'B'LUE, or 'W'HITE: ", "rgbw");
         switch (c)
         {
             case 'r':
