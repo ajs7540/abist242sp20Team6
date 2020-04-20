@@ -4,7 +4,7 @@ Purpose Details: A Application to manage a car dealership and customers buying c
 Course: IST242
 Author: Tom Fadelsak, William Perez, Amal Sabirov, Liliya Sadykova
 Date Developed: 3/12/20
-Last Date Changed:
+Last Date Changed: 4/20/2020
 Revision: 0
 */
 
