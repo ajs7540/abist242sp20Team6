@@ -13,8 +13,24 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
-
     public static void main(String[] args) {
+
+        /**
+         * A Car Dealership management system with authorization.
+         * The Car Dealership program creates several arrays that stores information and has pre-determined logic.
+         * The car management system is separated into a customer login and car salesperson.
+         * The customer login only can buy a car and update account details. Whereas, the salesperson login can manage the car inventory, update car details and check credit on a customer.
+         *
+         * @param Customer Has several attributes describing a customer using the application. A customer has a Username and password that is checked here before log in auth.
+         * @param SalesPerson Has several attributes describing a salesPerson using the application. A customer has a Username and password that is checked here before log in auth.
+         * @param Order Has a car object attached with a customer that the order belongs too. A sales person can only create orders.
+         * @param Car Has several attributes describing a car such as make, model and price. A car is added to the car Array that makes up the Car Dealerships inventory that all users have access too.
+         *
+         * @author          Tom Fadelsak, William Perez, Amal Sabirov, Liliya Sadykova CLASS: IST242 JoeOaks
+         * @version         1.0
+         * @since           <pre>Apr 22, 2020</pre>
+         */
+
         ArrayList<Customer> customerList = new ArrayList<>();
         ArrayList<SalesPerson> salesTeam = new ArrayList<>();
         ArrayList<Order> orders = new ArrayList<>();
