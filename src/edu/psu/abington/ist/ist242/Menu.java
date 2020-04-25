@@ -107,7 +107,7 @@ public class Menu {
                         }
                         promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu", "123456mq");
                     }
-                    case 'c':
+                case 'c':
                     Customer.printCustomers(customerList);
                     c = Main.getAction("Type in customer ID", "([\\d]+)+");
                     int a = Integer.parseInt(String.valueOf(c));
@@ -123,7 +123,7 @@ public class Menu {
     }
 
     public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList, ArrayList<Order> orders) {
-        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n", "qvup");
+        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n's'how info\n", "qvups");
         while (c != 'q') {
             switch (c) {
                 case 'v':
@@ -150,23 +150,44 @@ public class Menu {
                     Order order = new Order(date, currentCar);
                     orders.add(order);
 
-                case 'u':
-                    int customerIndex = callmenu(customerList.size()) - 1;
-                    System.out.println("Update: 'A'ddress, 'E'mail, or 'Q'uit");
+                case 's':
                     Scanner scnr2 = new Scanner(System.in);
-                    switch(customerIndex){
-                        case 'A':
-                        System.out.println("Please Enter your NEW Address: ");
-                        customerList.get(customerIndex).setAddress(scnr2.next());
-
-                        case 'E':
-                        System.out.println("Please Enter your NEW Email: ");
-                        customerList.get(customerIndex).seteMail(scnr2.next());
-                        case 'Q':
-                        break;
+                    System.out.println("Please Enter your ID: ");
+                    int cid = Integer.parseInt(scnr2.nextLine());
+                    for (Customer custom : customerList) {
+                        if (custom.userID == cid) {
+                            System.out.println("Your Address is " + custom.getAddress());
+                            System.out.println("Your E-mail is " + custom.geteMail());
+                            break;
+                        }
                     }
+                    break;
+
+                case 'u':
+                    Scanner scnr3 = new Scanner(System.in);
+                    System.out.println("Please Enter your ID: ");
+                    int id = Integer.parseInt(scnr3.nextLine());
+                    for (Customer custo : customerList) {
+                        if (custo.userID == id ) {
+                            System.out.println("Select: 'A'ddress, 'E'mail, 'Q'uit");
+                            char in = scnr3.nextLine().toUpperCase().charAt(0);
+                            switch (in) {
+                                case 'A':
+                                    System.out.println("Please Enter your NEW Address: ");
+                                    customerList.get(id - 1).setAddress(scnr3.nextLine());
+                                    break;
+                                case 'E':
+                                    System.out.println("Please Enter your NEW Email: ");
+                                    customerList.get(id - 1).seteMail(scnr3.nextLine());
+                                    break;
+                                case 'Q':
+                                    break;
+                            }
+                        }
+                    }
+
             }
-            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n", "qvup");
+            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n's'how info\n", "qvups");
         }
         return null;
     }

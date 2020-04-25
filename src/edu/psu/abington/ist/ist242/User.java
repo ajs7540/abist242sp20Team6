@@ -9,7 +9,6 @@ Revision: 0
 */
 package edu.psu.abington.ist.ist242;
 
-import java.util.ArrayList;
 
 public class User {
 

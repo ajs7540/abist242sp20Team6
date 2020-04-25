@@ -9,7 +9,7 @@ Revision: 0
 */
 package edu.psu.abington.ist.ist242;
 
-import javax.xml.bind.annotation.XmlElementDecl;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -20,6 +20,7 @@ public class Customer extends User {
         super(userID, userName, passWord, eMail, Address);
         this.creditScore = creditScore;
     }
+
 
     public void addCustomer(ArrayList<Customer> customerList)
     {
@@ -53,8 +54,7 @@ public class Customer extends User {
         return c1;
     }
 
-    public void deleteCustomer(ArrayList<Customer> customerList)
-    {
+    public void deleteCustomer(ArrayList<Customer> customerList) {
         customerList.remove(this);
     }
 
