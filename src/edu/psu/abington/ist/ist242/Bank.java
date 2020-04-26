@@ -36,6 +36,7 @@ public class Bank {
         this.cScore = cScore;
     }
 
+
     public static boolean checkCreditScore(int cScore) {
 
         /**

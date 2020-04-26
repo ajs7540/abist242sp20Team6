@@ -118,7 +118,7 @@ public class Menu {
                         }
                     }
             }
-            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory", "qvaer");
+            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory\n 'c'heck credit score\n", "qvaerc");
         }
     }
 
