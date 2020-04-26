@@ -143,12 +143,13 @@ public class Menu {
                     option = Menu.callmenu(carQuantity);
                     Car.getCarDetails(cars.get(option - 1));  //user selected vic
                     Scanner scnr = new Scanner(System.in);
-                    System.out.println("Enter Date of Order (mm/dd/yyy)");
+                    System.out.println("Enter Date of Order (mm/dd/yyyy)");
                     String date;
                     date = scnr.next();
                     Car currentCar = cars.get(option - 1);
                     Order order = new Order(date, currentCar);
                     orders.add(order);
+                    break;
 
                 case 's':
                     Scanner scnr2 = new Scanner(System.in);
