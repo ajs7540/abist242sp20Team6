@@ -13,6 +13,23 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Car {
+
+    /**
+     * This is the Car object that describes each car in the car dealership inventory
+     *
+     * @param int carID                A integer that is incrementally generated for each car of the application to uniquely identify them.
+     * @param int sellingPrice         integer price for each car
+     * @param int year                 A integer for the year or the car
+     * @param boolean isNew            A boolean for each car if true the car is new ELSE the car is old.
+     * @param String Make              A String for the make or each car
+     * @param String Model             A String for the model or each car
+     * @param enum Color               A enum for each color options for all cars. (RED, GREEN, BLUE, WHITE)
+     *
+     * @author
+     * @version                   1.0
+     * @since                     <pre>Apr 26, 2020</pre>
+     */
+
     int carID, sellingPrice, year;
     boolean isNew;
     String make, model;

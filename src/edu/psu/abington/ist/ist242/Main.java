@@ -21,9 +21,9 @@ public class Main {
          * The car management system is separated into a customer login and car salesperson.
          * The customer login only can buy a car and update account details. Whereas, the salesperson login can manage the car inventory, update car details and check credit on a customer.
          *
-         * @param Customer Has several attributes describing a customer using the application. A customer has a Username and password that is checked here before log in auth.
-         * @param SalesPerson Has several attributes describing a salesPerson using the application. A customer has a Username and password that is checked here before log in auth.
-         * @param Order Has a car object attached with a customer that the order belongs too. A sales person can only create orders.
+         * @param Customer Has several attributes describing a person using the application. A customer has a Username and password that is checked here before log in. A customer is added to the customer Array that makes up the users using the application.
+         * @param SalesPerson Has several attributes describing a employee working at the car dealership using the application. A sales person also has a Username and password that is checked here before log in.
+         * @param Order Has a attached car object along with a customer object. A order is added to the order Array that makes up the current orders with in the application.
          * @param Car Has several attributes describing a car such as make, model and price. A car is added to the car Array that makes up the Car Dealerships inventory that all users have access too.
          *
          * @author          Tom Fadelsak, William Perez, Amal Sabirov, Liliya Sadykova CLASS: IST242 JoeOaks
@@ -110,6 +110,20 @@ public class Main {
 
 
     public static char getAction(String prompt, String caseCheck) {
+
+        /**
+         * This accepts the user input and checks for input validation.
+         *
+         * @param String prompt       The print statement to the user when this method is called.
+         * @param String caseCheck    The valid options of letters that the user must enter. If the input is not matched it will print invalid input to the user and try again.
+         * @param String answer       What the user enters when scanner prompts a input.
+         * @param char firstChar      The first letter that the user enters when answer scanner is called.
+         * @return                    The first letter of answer if the first letter is match with a single char inside of caseCheck.
+         * @author
+         * @version                   1.0
+         * @since                     <pre>Apr 26, 2020</pre>
+         */
+
         Scanner scnr = new Scanner(System.in);
         String answer = "";
         System.out.println(prompt);
@@ -124,6 +138,20 @@ public class Main {
     }
 
     public static int login(ArrayList<Customer> cList, ArrayList<SalesPerson> sTeam) {
+
+        /**
+         * This accepts the user input and checks for input validation.
+         *
+         * @param int j       The string that the user enters when prompt.
+         * @param String userName     The first letter of the string the user enters.
+         * @param String password     The first letter of the string the user enters.
+         *
+         * @return                    The addition of integers a & b.
+         * @author
+         * @version                   1.0
+         * @since                     <pre>Apr 26, 2020</pre>
+         */
+
         String username;
         String password;
         int j = 0;

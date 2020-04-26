@@ -12,6 +12,19 @@ package edu.psu.abington.ist.ist242;
 
 public class User {
 
+    /**
+     * This describes all the users that are using the application.
+     *
+     * @param int userID            A integer that is incrementally generated for each user of the application to uniquely identify them.
+     * @param String userName       The stored/saved username for each user that is checked for auth at the beginning of the application.
+     * @param String passWord       The stored/saved password for each user that is checked for auth at the beginning of the application.
+     * @param String Address        The stored/saved address for each user.
+     * @param String eMail          The stored/saved email address for each user.
+     * @author
+     * @version                     1.0
+     * @since                       <pre>Apr 26, 2020</pre>
+     */
+
     public int userID;
     public String userName;
     public String Address;

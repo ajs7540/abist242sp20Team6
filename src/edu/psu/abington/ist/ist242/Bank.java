@@ -10,6 +10,17 @@ Revision: 0
 package edu.psu.abington.ist.ist242;
 
 public class Bank {
+
+    /**
+     * This is the Sales Persons users using the application.
+     *
+     * @param int bankID            A integer that is created for each customer of the application to have a credit score for purchasing a car.
+     * @param int cScore
+     * @author
+     * @version                     1.0
+     * @since                       <pre>Apr 26, 2020</pre>
+     */
+
     int bankID = 1;
     int cScore;
 
@@ -26,6 +37,19 @@ public class Bank {
     }
 
     public static boolean checkCreditScore(int cScore) {
+
+        /**
+         * This is the Sales Persons users using the application.
+         *
+         * @param int cScore                 A integer that is created for each customer of the application to have a credit score for purchasing a car.
+         * @param boolean approved           A boolean that returns true if cScore is between 650 and 850, ELSE False.
+         *
+         * @return                           The boolean value of approved
+         * @author
+         * @version                          1.0
+         * @since                            <pre>Apr 26, 2020</pre>
+         */
+
         boolean approved = false;
         if (cScore >= 650 && cScore <= 850) {
             approved = true;

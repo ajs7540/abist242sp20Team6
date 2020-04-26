@@ -19,6 +19,20 @@ public class Customer extends User {
     public Customer(int userID, String userName, String passWord, String eMail, String Address, int creditScore) {
         super(userID, userName, passWord, eMail, Address);
         this.creditScore = creditScore;
+
+        /**
+         * This is the customer users using the application.
+         *
+         * @param int userID            A integer that is incrementally generated for each user of the application to uniquely identify them.
+         * @param String userName       The stored/saved username for each customer that is checked for auth at the beginning of the application.
+         * @param String passWord       The stored/saved password for each customer that is checked for auth at the beginning of the application.
+         * @param String Address        The stored/saved address for each customer.
+         * @param String eMail          The stored/saved email address for each customer.
+         * @param int creditScore       The stored/saved credit score for each customer using this application
+         * @author
+         * @version                     1.0
+         * @since                       <pre>Apr 26, 2020</pre>
+         */
     }
 
 
@@ -74,6 +88,18 @@ public class Customer extends User {
         }
     }
     public static boolean checkPassword(String username, String password, ArrayList<Customer> customerList) {
+
+        /**
+         * This checks the password and username that the Customer inputs when they are logging in.
+         *
+         * @param String userName            The stored/saved username for each Customer that is checked for auth at the beginning of the application.
+         * @param String passWord            The stored/saved password for each Customer that is checked for auth at the beginning of the application.
+         * @param ArrayList Customer         The stored/saved Customers inside the application.
+         * @author
+         * @version                          1.0
+         * @since                            <pre>Apr 26, 2020</pre>
+         */
+
         boolean found = false;
         for (Customer cust : customerList) {
             if (cust.userName.equals(username) && cust.passWord.equals(password)) {

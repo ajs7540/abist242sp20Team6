@@ -11,6 +11,22 @@ package edu.psu.abington.ist.ist242;
 import java.util.Date;
 public class PaymentInformation {
 
+    /**
+     * This is the payment information for each order that is created.
+     *
+     * @param int paymentID                  A integer that is incrementally generated for each payment of the application to uniquely identify them.
+     * @param Date paymentDate               The date stored for each payment. See date class for more details.
+     * @param String paymentType             The stored/saved payment type for each payment. (Cash / Credit card)
+     * @param boolean paymentAccepted        If True, Then payment was accepted ELSE If False, Payment was denied
+     * @param int userID                     A user of the application that is attached to the payment information.
+     * @param float paymentAmount            A float value for each stored for each payment.
+     *
+     * @author
+     * @version                     1.0
+     * @since                       <pre>Apr 26, 2020</pre>
+     */
+
+
     int paymentID = 123456789;
     Date paymentDate;
     String paymentType;
