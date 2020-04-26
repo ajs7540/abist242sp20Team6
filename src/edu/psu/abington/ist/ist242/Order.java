@@ -10,8 +10,23 @@ Revision: 0
 package edu.psu.abington.ist.ist242;
 
 import java.util.ArrayList;
-//test
+
 public class Order{
+
+    /**
+     * Order has a date and a car with a total.
+     *
+     * @param int orderID              A integer that is incrementally generated for each car of the application to uniquely identify them.
+     * @param String date              using date.java to format date properly and marking the date of the order
+     * @param Double double            A double for the order total price
+     * @param Car Car                  A car object to attach the current car to the order
+
+     *
+     * @author                         Tom Fadelsak
+     * @version                        1.0
+     * @since                          <pre>Apr 26, 2020</pre>
+     */
+
     static int orderID;
     String date;
     Double orderTotal;

@@ -40,16 +40,6 @@ public class Car {
         RED, GREEN, BLUE, WHITE;
     }
 
-    /**
-     *
-     * @param carID
-     * @param isNew
-     * @param sellingPrice
-     * @param make
-     * @param year
-     * @param model
-     * @param color
-     */
 
     public Car (int carID, boolean isNew, int sellingPrice, String make, int year, String model, Color color)
     {
