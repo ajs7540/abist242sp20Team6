@@ -121,8 +121,10 @@ public class Menu {
             c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory\n 'c'heck credit score\n", "qvaerc");
         }
     }
-
-    public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList, ArrayList<Order> orders) {
+    public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList, ArrayList<Order> orders){
+        return customerMenu(cars, customerList, orders, null);
+    }
+    public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList, ArrayList<Order> orders, User currentCustomer) {
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n's'how info\n", "qvups");
         while (c != 'q') {
             switch (c) {
@@ -165,23 +167,20 @@ public class Menu {
                     break;
 
                 case 'u':
-                    Scanner scnr3 = new Scanner(System.in);
-                    System.out.println("Please Enter your ID: ");
-                    int id = Integer.parseInt(scnr3.nextLine());
-                    for (Customer custo : customerList) {
-                        if (custo.userID == id ) {
-                            System.out.println("Select: 'A'ddress, 'E'mail, 'Q'uit");
-                            char in = scnr3.nextLine().toUpperCase().charAt(0);
+                    for (int i = 0; i < customerList.size(); i++) {
+                        if (customerList.get(i).userID == currentCustomer.userID ) {
+                            char in = Main.getAction("Select: 'A'ddress, 'E'mail, 'Q'uit", "aeq");
+                            Scanner scnr3 = new Scanner(System.in);
                             switch (in) {
-                                case 'A':
+                                case 'a':
                                     System.out.println("Please Enter your NEW Address: ");
-                                    customerList.get(id - 1).setAddress(scnr3.nextLine());
+                                    customerList.get(i).setAddress(scnr3.nextLine());
                                     break;
-                                case 'E':
+                                case 'e':
                                     System.out.println("Please Enter your NEW Email: ");
-                                    customerList.get(id - 1).seteMail(scnr3.nextLine());
+                                    customerList.get(i).seteMail(scnr3.nextLine());
                                     break;
-                                case 'Q':
+                                case 'q':
                                     break;
                             }
                         }

@@ -80,15 +80,15 @@ public class Main {
 
         char c = getAction("Enter L to Login \nEnter c to create account \nEnter q to Quit", "lcq");
         if (c == 'l') {
-            int i = login(customerList, salesTeam);
-            if (i ==1)
+            User currentUser = login(customerList, salesTeam);
+            if (currentUser instanceof Customer)
             {
                 System.out.println("-----------Customer menu-----------");
-                Order completedOrder = Menu.customerMenu(cars, customerList, orders);
+                Order completedOrder = Menu.customerMenu(cars, customerList, orders, currentUser);
                 orders.add(completedOrder);
                 Order.printOrders(orders);
             }
-            else if (i == 2)
+            else if (currentUser instanceof SalesPerson)
             {
                 System.out.println("-----------Sales person menu-----------");
                 Menu.salesPersonMenu(cars, customerList);
@@ -137,16 +137,16 @@ public class Main {
         return firstChar;
     }
 
-    public static int login(ArrayList<Customer> cList, ArrayList<SalesPerson> sTeam) {
+    public static User login(ArrayList<Customer> cList, ArrayList<SalesPerson> sTeam) {
 
         /**
          * This accepts the user input and checks for input validation.
          *
-         * @param int j       The string that the user enters when prompt.
+         * @param int j               The string that the user enters when prompt.
          * @param String userName     The first letter of the string the user enters.
          * @param String password     The first letter of the string the user enters.
          *
-         * @return                    The addition of integers a & b.
+         * @return                    1 = if customer or 2 = sales person
          * @author
          * @version                   1.0
          * @since                     <pre>Apr 26, 2020</pre>
@@ -154,7 +154,6 @@ public class Main {
 
         String username;
         String password;
-        int j = 0;
         Scanner sc = new Scanner(System.in);
         for (int i = 3; i >= 0 ; i--) {
             System.out.println("Please login");
@@ -167,17 +166,21 @@ public class Main {
 
             if (Customer.checkPassword(username, password, cList))
             {
-                j = 1;
-                break;
-            } else if (SalesPerson.checkPassword(username, password, sTeam))
-            {
-                j = 2;
-                break;
-            } else {
-                System.out.println("The username and password you entered are incorrect.\nYou have " + i + " more attempts until program quits.");
+                for(Customer customer : cList) {
+                    if (username.equals(customer.userName)) {
+                        return customer;
+                    }
+                }
             }
+            if (SalesPerson.checkPassword(username, password, sTeam)) {
+                for (SalesPerson salesPerson : sTeam) {
+                    if (username.equals(salesPerson.userName)) {
+                        return salesPerson;
+                    }
+                }
+            }
+        System.out.println("The username and password you entered are incorrect.\nYou have " + i + " more attempts until program quits.");
         }
-        return j;
+        return null;
     }
-
 }
