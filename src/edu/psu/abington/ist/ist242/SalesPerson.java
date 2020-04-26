@@ -23,7 +23,7 @@ public class SalesPerson extends User {
          * @param String passWord       The stored/saved password for each Sales Persons that is checked for auth at the beginning of the application.
          * @param String Address        The stored/saved address for each Sales Persons.
          * @param String eMail          The stored/saved email address for each Sales Persons.
-         * @author
+         * @author                      Team 6
          * @version                     1.0
          * @since                       <pre>Apr 26, 2020</pre>
          */
@@ -58,7 +58,7 @@ public class SalesPerson extends User {
          * @param String userName            The stored/saved username for each Sales Persons that is checked for auth at the beginning of the application.
          * @param String passWord            The stored/saved password for each Sales Persons that is checked for auth at the beginning of the application.
          * @param ArrayList SalesPerson      The stored/saved sales persons inside the application.
-         * @author
+         * @author                           Team 6
          * @version                          1.0
          * @since                            <pre>Apr 26, 2020</pre>
          */

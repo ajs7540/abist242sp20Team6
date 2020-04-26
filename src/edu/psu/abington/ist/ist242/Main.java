@@ -119,7 +119,7 @@ public class Main {
          * @param String answer       What the user enters when scanner prompts a input.
          * @param char firstChar      The first letter that the user enters when answer scanner is called.
          * @return                    The first letter of answer if the first letter is match with a single char inside of caseCheck.
-         * @author
+         * @author                    Team 6
          * @version                   1.0
          * @since                     <pre>Apr 26, 2020</pre>
          */
@@ -147,7 +147,7 @@ public class Main {
          * @param String password     The first letter of the string the user enters.
          *
          * @return                    1 = if customer or 2 = sales person
-         * @author
+         * @author                    Team 6
          * @version                   1.0
          * @since                     <pre>Apr 26, 2020</pre>
          */

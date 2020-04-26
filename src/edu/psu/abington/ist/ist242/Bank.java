@@ -14,9 +14,10 @@ public class Bank {
     /**
      * This is the Sales Persons users using the application.
      *
-     * @param int bankID            A integer that is created for each customer of the application to have a credit score for purchasing a car.
-     * @param int cScore
-     * @author
+     * @param int bankID            A integer that is incrementally generated for each bank of the application to uniquely identify them.
+     * @param int cScore            A integer that is created for each customer of the application to have a credit score for purchasing a car.
+     *
+     * @author                      Team 6
      * @version                     1.0
      * @since                       <pre>Apr 26, 2020</pre>
      */
@@ -46,7 +47,7 @@ public class Bank {
          * @param boolean approved           A boolean that returns true if cScore is between 650 and 850, ELSE False.
          *
          * @return                           The boolean value of approved
-         * @author
+         * @author                           Team 6
          * @version                          1.0
          * @since                            <pre>Apr 26, 2020</pre>
          */

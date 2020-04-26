@@ -25,9 +25,9 @@ public class Car {
      * @param String Model             A String for the model or each car
      * @param enum Color               A enum for each color options for all cars. (RED, GREEN, BLUE, WHITE)
      *
-     * @author
-     * @version                   1.0
-     * @since                     <pre>Apr 26, 2020</pre>
+     * @author                         Team 6
+     * @version                        1.0
+     * @since                          <pre>Apr 26, 2020</pre>
      */
 
     int carID, sellingPrice, year;

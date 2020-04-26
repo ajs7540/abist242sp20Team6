@@ -21,9 +21,9 @@ public class PaymentInformation {
      * @param int userID                     A user of the application that is attached to the payment information.
      * @param float paymentAmount            A float value for each stored for each payment.
      *
-     * @author
-     * @version                     1.0
-     * @since                       <pre>Apr 26, 2020</pre>
+     * @author                               Team 6
+     * @version                              1.0
+     * @since                                <pre>Apr 26, 2020</pre>
      */
 
 

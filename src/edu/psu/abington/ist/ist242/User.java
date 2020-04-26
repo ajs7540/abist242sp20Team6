@@ -20,7 +20,7 @@ public class User {
      * @param String passWord       The stored/saved password for each user that is checked for auth at the beginning of the application.
      * @param String Address        The stored/saved address for each user.
      * @param String eMail          The stored/saved email address for each user.
-     * @author
+     * @author                      Team 6
      * @version                     1.0
      * @since                       <pre>Apr 26, 2020</pre>
      */

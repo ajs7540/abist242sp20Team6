@@ -29,7 +29,7 @@ public class Customer extends User {
          * @param String Address        The stored/saved address for each customer.
          * @param String eMail          The stored/saved email address for each customer.
          * @param int creditScore       The stored/saved credit score for each customer using this application
-         * @author
+         * @author                      Team 6
          * @version                     1.0
          * @since                       <pre>Apr 26, 2020</pre>
          */
@@ -95,7 +95,7 @@ public class Customer extends User {
          * @param String userName            The stored/saved username for each Customer that is checked for auth at the beginning of the application.
          * @param String passWord            The stored/saved password for each Customer that is checked for auth at the beginning of the application.
          * @param ArrayList Customer         The stored/saved Customers inside the application.
-         * @author
+         * @author                           Team 6
          * @version                          1.0
          * @since                            <pre>Apr 26, 2020</pre>
          */

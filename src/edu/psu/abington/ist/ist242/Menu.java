@@ -14,6 +14,18 @@ import java.util.ArrayList;
 public class Menu {
 
     public static Integer callmenu(int a) {
+
+        /**
+         * This accepts the user input and checks for input validation.
+         *
+         * @param int a                    The highest option for the options that are valid
+         * @param Integer userInputA       What the user enters when scanner prompts a input.
+         * @return                         The integer that is between int a and zero.
+         * @author                         Tom Fadelsak
+         * @version                        1.0
+         * @since                          <pre>Apr 26, 2020</pre>
+         */
+
         try {
             System.out.println("Enter a number between 1 and " + a + " or q for quit.");
             Scanner sc = new Scanner(System.in);
@@ -32,6 +44,18 @@ public class Menu {
     }
 
     public static void salesPersonMenu(ArrayList<Car> cars, ArrayList<Customer> customerList) {
+
+        /**
+         * This is the sales person main menu.
+         * 'q' to quit , 'v'iew inventory , 'a'dd car , 'e'dit car , 'r'emove car from inventory , 'c'heck credit score
+         *
+         * @param char c                   The option called from getAction that the sales person will enter
+         *
+         * @author                         Team 6
+         * @version                        1.0
+         * @since                          <pre>Apr 26, 2020</pre>
+         */
+
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory \n'c'heck credit score", "qvaerc");
         while (c != 'q') {
             switch (c) {
@@ -125,6 +149,18 @@ public class Menu {
         return customerMenu(cars, customerList, orders, null);
     }
     public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList, ArrayList<Order> orders, User currentCustomer) {
+
+        /**
+         * This is the customer main menu
+         * 'q' to quit , 'v'iew inventory , 'u'pdate your info , 'p' To purchase a car , 's'how info.
+         *
+         * @param char c                   The option called from getAction that the customer will enter
+         *
+         * @author                         Team 6
+         * @version                        1.0
+         * @since                          <pre>Apr 26, 2020</pre>
+         */
+
         char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n's'how info\n", "qvups");
         while (c != 'q') {
             switch (c) {

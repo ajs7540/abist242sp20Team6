@@ -20,9 +20,8 @@ public class Order{
      * @param String date              using date.java to format date properly and marking the date of the order
      * @param Double double            A double for the order total price
      * @param Car Car                  A car object to attach the current car to the order
-
      *
-     * @author                         Tom Fadelsak
+     * @author                         Team 6
      * @version                        1.0
      * @since                          <pre>Apr 26, 2020</pre>
      */
