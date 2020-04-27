@@ -161,7 +161,7 @@ public class Menu {
          * @since                          <pre>Apr 26, 2020</pre>
          */
 
-        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n's'how info\n", "qvups");
+        char c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n's'how info\n'o'rder history", "qvupso");
         while (c != 'q') {
             switch (c) {
                 case 'v':
@@ -189,6 +189,11 @@ public class Menu {
                     orders.add(order);
                     break;
 
+
+                case 'o':
+                    Order.printOrders(orders);
+                    break;
+
                 case 's':
                     Scanner scnr2 = new Scanner(System.in);
                     System.out.println("Please Enter your ID: ");
@@ -201,6 +206,7 @@ public class Menu {
                         }
                     }
                     break;
+
 
                 case 'u':
                     for (int i = 0; i < customerList.size(); i++) {
@@ -223,7 +229,7 @@ public class Menu {
                     }
 
             }
-            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n's'how info\n", "qvups");
+            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'u'pdate your info\n'p' To purchase a car\n's'how info\n'o'rder history '", "qvupso");
         }
         return null;
     }
