@@ -133,8 +133,9 @@ public class Menu {
                     }
                 case 'c':
                     Customer.printCustomers(customerList);
-                    c = Main.getAction("Type in customer ID", "([\\d]+)+");
-                    int a = Integer.parseInt(String.valueOf(c));
+                    System.out.println("Type in customer ID");
+                    Scanner scnr0 = new Scanner(System.in);
+                    int a = Integer.parseInt(String.valueOf(scnr0.nextInt()));
                     for (Customer cust : customerList) {
                         if (cust.userID == a) {
                             Bank.checkCreditScore(cust.creditScore);
