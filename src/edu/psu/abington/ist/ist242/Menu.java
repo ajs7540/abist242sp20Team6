@@ -129,7 +129,7 @@ public class Menu {
                                 cars.get(carIndex).setSellingPrice(scnr1.nextInt());
                                 break;
                         }
-                        promptInput = Main.getAction("Press 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu", "123456mq");
+                        promptInput = Main.getAction("\nPress 1 to edit Year\nPress 2 to edit \"is new?\"\nPress 3 to edit make of car\nPress 4 to edit model of car\nPress 5 to edit color\nPress 6 to edit selling price\nPress m to go to main menu", "123456mq");
                     }
                 case 'c':
                     Customer.printCustomers(customerList);
@@ -143,7 +143,7 @@ public class Menu {
                         }
                     }
             }
-            c = Main.getAction("Select an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory\n 'c'heck credit score\n", "qvaerc");
+            c = Main.getAction("\nSelect an action or press 'q' to quit:\n'v'iew inventory\n'a'dd car\n'e'dit car\n'r'emove car from inventory\n'c'heck credit score\n", "qvaerc");
         }
     }
     public static Order customerMenu(ArrayList<Car> cars, ArrayList<Customer> customerList, ArrayList<Order> orders){
